@@ -1,0 +1,267 @@
+
+.projetos {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 80%; /* Limita a largura do conteúdo */
+    border: 1px solid #555; /* Borda acinzentada */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    border-radius: 8px; /* Cantos arredondados */
+    color: #eee; /* Texto em cinza claro para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+h1, h2, h3 {
+    font-family: 'Verdana', sans-serif; /* Substituir com fontes personalizadas se necessário */
+    font-weight: bold;
+    color: #fff; /* Cor branca para os títulos */
+}
+
+p, li {
+    font-family: 'Arial', sans-serif; /* Fonte limpa para corpo de texto */
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+    font-size: 1rem; /* Tamanho de fonte ajustado para legibilidade */
+}
+
+#languages {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.language-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.language {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.language img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.language:hover {
+    transform: scale(1.1);
+    border-color: #333;
+}
+
+#projects {
+    text-align: center;
+}
+
+#project-details.hidden {
+    display: none;
+}
+
+#project-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+#project-details ul li {
+    margin: 0.5rem 0;
+}
+
+#github-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#github-link:hover {
+    background-color: #555;
+}
+
+.language.selected {
+    border: 2px solid blue;
+}
+
+.project-details-more {
+    display: none; /* Ocultado inicialmente */
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa; /* Cinza claro */
+}
+
+/* Estilo para os botões "Ver mais" e "Ver no GitHub" */
+.show-more,
+#project-details ul li a {
+    display: inline-block; /* Exibe como botão inline */
+    cursor: pointer;
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    background-color: #007bff; /* Cor azul para o botão */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Cantos arredondados */
+    transition: background-color 0.3s, transform 0.2s; /* Suaviza transições */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar */
+}
+
+.show-more:hover,
+#project-details ul li a:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.show-more:active,
+#project-details ul li a:active {
+    background-color: #003d80; /* Azul ainda mais escuro ao clicar */
+    transform: scale(0.95); /* Reduz levemente ao pressionar */
+}
+
+/* Alinha os botões lado a lado */
+/* Centraliza os botões */
+.project-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin-top: 1rem; /* Espaçamento superior */
+}
+
+
+
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-image: url('../img/portfolio/test3.jpeg'); /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.sobre-mim-conteudo {
+    display: flex;
+    gap: 2rem;
+    max-width: 80%;
+    padding: 2rem;
+    color: #fff; /* Texto branco para contraste */
+}
+
+.sobre-mim-texto, .sobre-mim-tecnologias {
+    flex: 1;
+}
+
+.sobre-mim-texto h2, .sobre-mim-tecnologias h2 {
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.sobre-mim-texto p {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #fff; /* Garantindo texto branco */
+}
+
+.sobre-mim-tecnologias ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre-mim-tecnologias ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #fff; /* Texto branco */
+}
+
+
+
+
+.formacao-academica {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.formacao-academica h2 {
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.instituicao {
+    margin-bottom: 1.5rem;
+}
+
+.instituicao h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.instituicao p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #eee;
+}
+
+.instituicao ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.instituicao ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.baixar-curriculo {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#download-cv {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4fa3ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#download-cv:hover {
+    background-color: #80c0ff;
+    transform: scale(1.05);
+}
+
+#download-cv:active {
+    background-color: #357ab8;
+    transform: scale(0.95);
+}

@@ -1,0 +1,24 @@
+<!-- src/main/resources/templates/fragments/transparentBox.html -->
+<!DOCTYPE html>
+<div xmlns:th="http://www.thymeleaf.org"
+     th:fragment="contentBox">
+     
+    <style>
+      .transparent-box {
+        width: 90%;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        border: 10px solid #ccc; /* Borda cinza */
+        background-color: transparent; /* Fundo transparente */
+        /* Opcional: Se quiser um arredondado leve, use border-radius */
+        border-radius: 8px;
+        
+      }
+    </style>
+
+    <!-- Div real que formará o retângulo -->
+    <div class="transparent-box">
+        <!-- Você pode colocar qualquer conteúdo aqui -->
+        <h2>Meu Retângulo</h2>
+        <p>Este é o conteúdo do retângulo transparente!</p>
+    </div>
+</div>

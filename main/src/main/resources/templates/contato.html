@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+
+    <link rel="stylesheet" href="./css/contato.css" />
+
+
+</head>
+
+<body>
+
+
+
+    <div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+    <div class="container">
+        <h1>Entre em Contato</h1>
+        <ul class="contact-info">
+            <li>
+                <strong>Telefone:</strong> (11) 97452-7717
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('+5511974527717')" alt="Copiar">
+            </li>
+            <li>
+                <strong>Discord:</strong> fbgh54rt
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('fbgh54rt')" alt="Copiar">
+            </li>
+            <li>
+                <strong>Email:</strong> r2.arthur.prince@gmail.com
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('r2.arthur.prince@gmail.com')" alt="Copiar">
+            </li>
+            <li>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arthur-prince-de-almeida-50337320b/" target="_blank">arthur-prince-de-almeida</a>
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('https://www.linkedin.com/in/arthur-prince-de-almeida-50337320b/')" alt="Copiar">
+            </li>
+            <li>
+                <strong>Instagram:</strong> <a href="https://www.instagram.com/arthurprince_fb/profilecard/?igsh=em0zeXIwcW05aDd0" target="_blank">@arthurprince_fb</a>
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('@arthurprince_fb')" alt="Copiar">
+            </li>
+            <li>
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/arthur.prince.18488?mibextid=ZbWKwL" target="_blank">Arthur Prince</a>
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('https://www.facebook.com/arthur.prince.18488?mibextid=ZbWKwL')" alt="Copiar">
+            </li>
+            <li>
+                <strong>YouTube:</strong> <a href="https://www.youtube.com/@arthurprincedealmeida6462" target="_blank">arthurprincedealmeida</a>
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('https://www.youtube.com/@arthurprincedealmeida6462')" alt="Copiar">
+            </li>
+            <li>
+                <strong>GitHub:</strong> <a href="https://github.com/Arthur-Prince" target="_blank">Arthur-Prince</a>
+                <img src="./img/copy.png" class="copy-icon" onclick="copyToClipboard('https://github.com/Arthur-Prince')" alt="Copiar">
+            </li>
+        </ul>
+        
+        <div class="form-container">
+            <h2>Envie uma Mensagem</h2>
+            <form action="#" method="post">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="text" name="titulo" placeholder="Título do Assunto" required>
+                <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./js/style/copiar.js"></script>
+</body>
+
+</html>

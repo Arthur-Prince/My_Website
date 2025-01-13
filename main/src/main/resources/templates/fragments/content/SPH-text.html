@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<div class="c47 doc-content" xmlns:th="http://www.thymeleaf.org" th:fragment="sph">
+	
+	<link rel="stylesheet" th:href="@{/css/SPH.css}"/>
+	
+	<div>
+	        <p class="c14 c49"><span class="c5"></span></p>
+	    </div>
+	    <p class="c20"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 222.00px; height: 125.00px;"><img
+	                alt="" src="/img/sph/image49.png"
+	                style="width: 222.00px; height: 125.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c20"><span class="c5">UNIVERSIDADE DE S&Atilde;O PAULO</span></p>
+	    <p class="c20"><span class="c5">ESCOLA DE ARTES, CI&Ecirc;NCIAS E HUMANIDADES</span></p>
+	    <p class="c20"><span class="c5">CURSO DE BACHARELADO EM SISTEMAS DE INFORMA&Ccedil;&Atilde;O</span></p>
+	    <p class="c41"><span class="c5">&nbsp;</span></p>
+	    <p class="c41"><span class="c5">&nbsp;</span></p>
+	    <p class="c41"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">Arthur Prince de Almeida</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c11">Caracter&iacute;sticas de uma implementa&ccedil;&atilde;o em paralelo do
+	            m&eacute;todo</span></p>
+	    <p class="c20"><span class="c11">SPH com o uso da tecnologia de GLSL(OpenGL Shading</span></p>
+	    <p class="c20"><span class="c11">Language)</span></p>
+	    <p class="c20 c14"><span class="c11"></span></p>
+	    <p class="c20"><span class="c11">&nbsp;</span></p>
+	    <p class="c20"><span class="c11">&nbsp; </span></p>
+	    <p class="c20"><span class="c11">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">S&atilde;o Paulo</span></p>
+	    <p class="c20"><span class="c5">2022</span></p>
+	    <p class="c20"><span class="c5">Arthur Prince de Almeida</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp; </span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c11">Caracter&iacute;sticas de uma implementa&ccedil;&atilde;o em paralelo do
+	            m&eacute;todo</span></p>
+	    <p class="c20"><span class="c11">SPH com o uso da tecnologia de GLSL(OpenGL Shading</span></p>
+	    <p class="c20"><span class="c11">Language)</span></p>
+	    <p class="c41"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">&nbsp;</span></p>
+	    <p class="c41"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">Monografia apresentada &agrave; Escola de Artes, Ci&ecirc;ncias e Humanidades da
+	            Universidade de S&atilde;o Paulo, como parte dos requisitos exigidos na disciplina ACH 2018 &ndash; Projeto
+	            Supervisionado ou de Gradua&ccedil;&atilde;o II, para obten&ccedil;&atilde;o do t&iacute;tulo de Bacharelado
+	            em Sistemas de Informa&ccedil;&atilde;o.</span></p>
+	    <p class="c16"><span class="c5">Modalidade: TCC curto (1 semestre) &ndash; individual.</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">Orientador: Helton Hideraldo B&iacute;scaro</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c16"><span class="c5">&nbsp;</span></p>
+	    <p class="c20"><span class="c5">S&atilde;o Paulo</span></p>
+	    <p class="c20"><span>2022</span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.6utylyjata35"><span class="c27">Resumo</span></h1>
+	    <p class="c33"><span class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As t&eacute;cnicas de
+	            implementa&ccedil;&atilde;o de fluidos s&atilde;o abordagens utilizadas para simular o comportamento
+	            realista de fluidos em ambientes virtuais. Essas t&eacute;cnicas t&ecirc;m aplica&ccedil;&otilde;es em uma
+	            variedade de campos, incluindo filmes, jogos, simula&ccedil;&otilde;es de engenharia e efeitos visuais. Uma
+	            das t&eacute;cnicas comuns &eacute; a Simula&ccedil;&atilde;o de Part&iacute;culas Suavizadas (SPH), que
+	            modela o fluido como uma cole&ccedil;&atilde;o de part&iacute;culas que interagem com suas vizinhas. Neste
+	            artigo ser&aacute; abordado uma nova forma de implementa&ccedil;&atilde;o dessa t&eacute;cnica usando uma
+	            malha, o qual tem como grande vantagem a possibilidade de ser completamente paralelizada. Por essa
+	            raz&atilde;o, ser&aacute; abordado a implementa&ccedil;&atilde;o com a linguagem de shader OpenGL para
+	            programar o algoritmo em GPU(Unidade de Processamento Gr&aacute;fico). Em resumo, primeiro o artigo
+	            introduzir&aacute; sobre algoritmos de gera&ccedil;&atilde;o de fluidos. Depois tratar&aacute; de aspectos
+	            te&oacute;ricos do m&eacute;todo SPH como as equa&ccedil;&otilde;es de Navier-Stokes e as
+	            equa&ccedil;&otilde;es espaciais. Em seguida tratar&aacute; da implementa&ccedil;&atilde;o do SPH com malha
+	            usando um algoritmo de integra&ccedil;&atilde;o de part&iacute;culas. Por fim, abordaremos sobre um
+	            experimento para medir a efici&ecirc;ncia dessa t&eacute;cnica e ser&atilde;o discutidos os resultados
+	            obtidos.</span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c23"><span class="c0">Palavras chaves: SPH, OpenGL, Navier-Stokes, GPU, malha de part&iacute;culas</span>
+	    </p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.rmcl3ufdxch0"><span class="c27">Lista de figuras</span></h1>
+	    <p class="c1"><span class="c5"></span></p>
+		<p class="c23">
+		  <a href="#fig1">
+		    <span class="c0">Figura 1 - integra&ccedil;&atilde;o de part&iacute;culas</span>
+		  </a>
+		</p>
+		<p class="c1"><span class="c5"></span></p>
+
+		<p class="c23">
+		  <a href="#fig2">
+		    <span class="c0">Figura 2 - raio de difus&atilde;o</span>
+		  </a>
+		</p>
+		<p class="c1"><span class="c0"></span></p>
+
+		<p class="c23">
+		  <a href="#fig3">
+		    <span class="c0">Figura 3 - distribui&ccedil;&atilde;o de massa</span>
+		  </a>
+		</p>
+		<p class="c1"><span class="c0"></span></p>
+
+		<p class="c23">
+		  <a href="#fig4">
+		    <span class="c0">Figura 4 - demonstra&ccedil;&atilde;o do funcionamento da reintegra&ccedil;&atilde;o</span>
+		  </a>
+		</p>
+		<p class="c1"><span class="c0"></span></p>
+
+		<p class="c23">
+		  <a href="#fig5">
+		    <span class="c0">Figura 5 - Exemplo do funcionamento do algoritmo</span>
+		  </a>
+		</p>
+		<p class="c1"><span class="c0"></span></p>
+
+		<p class="c23">
+		  <a href="#fig6">
+		    <span class="c0">Figura 6 - Animando o fluido em uma imagem</span>
+		  </a>
+		</p>
+
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.pe85844pm5c8"><span class="c27">Lista de tabelas</span></h1>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><a href="#tab1"><span class="c0">Tabela 1 - resultado do experimento</span></a></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.dbxfcra7274o"><span class="c27">Lista de Algoritmos</span></h1>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c23"><a href="#alg1"><span class="c3">Algoritmo 1 - SPH</span></a></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c23"><a href="#alg2"><span class="c3">Algoritmo 2 - Reintegra&ccedil;&atilde;o</span></a></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.y3iqjzz0z2ep"><span>S</span><span class="c27">um&aacute;rio</span></h1>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c34 c14"><span class="c30 c32"></span></p>
+	    <p class="c17"><span class="c11"><a class="c37"
+	                href="#h.y3iqjzz0z2ep">Sum&aacute;rio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.nctmai94jr3i">1 -
+	                Introdu&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.zgfioi4zjut3">2 - &nbsp;Aspectos
+	                te&oacute;ricos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.osmetvvd2znu">3 -
+	                &nbsp;Metodologia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11</a></span></p>
+	    <p class="c17 c35"><span class="c0"><a class="c37" href="#h.18l9wlv8hcqr">3.1 -
+	                Simula&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11</a></span></p>
+	    <p class="c17 c19"><span class="c0"><a class="c37" href="#h.j0yst0i4p5et">3.1.1 - Algoritmo
+	                b&aacute;sico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12</a></span></p>
+	    <p class="c17 c35"><span class="c0"><a class="c37" href="#h.kuwvvc9wnn0g">3.2 -
+	                Reintegra&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.ylc0gmbrdghd">4 -
+	                Resultados&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.c399e8x4l9gr">5 -
+	                &nbsp;Conclus&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21</a></span></p>
+	    <p class="c17"><span class="c3"><a class="c37" href="#h.bhrfmw9mcqum">6 - Refer&ecirc;ncias
+	                bibliogr&aacute;ficas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22</a></span></p>
+	    <p class="c14 c34"><span class="c30 c32"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.nctmai94jr3i"><span class="c27">1
+	            -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introdu&ccedil;&atilde;o</span></h1>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os algoritmos de
+	            gera&ccedil;&atilde;o de fluidos s&atilde;o t&eacute;cnicas computacionais que visam simular e reproduzir o
+	            comportamento realista de fluidos, como &aacute;gua, fogo, fuma&ccedil;a e outros elementos. Atualmente
+	            existem dois m&eacute;todos que se destacam: a Euleriana e a Lagrangiana.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O m&eacute;todo de Euleriano utiliza
+	            uma geometria de malha, ou fixa ou adaptativa(conhecido como AMR or Adaptive Mesh Refinement), com os
+	            par&acirc;metros do fluido avaliado nas pr&oacute;prias c&eacute;lulas da malha. Sendo assim, locais focais
+	            com maior resolu&ccedil;&atilde;o ser&atilde;o mais precisos do que &aacute;reas de menor interesse,
+	            portanto, possibilitando a otimiza&ccedil;&atilde;o de recursos na renderiza&ccedil;&atilde;o do
+	            fluido.</span></p>
+	    <p class="c23"><span class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Por outro lado, o m&eacute;todo
+	            Lagrangiano n&atilde;o utiliza pontos fixos no espa&ccedil;o, na verdade as propriedades f&iacute;sicas e
+	            equa&ccedil;&otilde;es que envolvem o fluido se movimentam junto com uma part&iacute;cula. Esse
+	            m&eacute;todo tem um foco na segunda derivada, o que significa que a partir das propriedades
+	            hidrodin&acirc;micas da part&iacute;cula(como posi&ccedil;&atilde;o, velocidade, massa, etc&hellip;) e da
+	            influ&ecirc;ncia que as outras part&iacute;culas t&ecirc;m sobre aquela(as for&ccedil;as de viscosidade e
+	            press&atilde;o) que se calcula seu comportamento. Por essa raz&atilde;o se &eacute; dito que cada
+	            part&iacute;cula &eacute; &ldquo;suavizada&rdquo; sobre um volume finito em um contexto onde a massa
+	            &eacute; fixa, ou seja, manuseando a densidade da part&iacute;cula. Esse m&eacute;todo baseado em
+	            part&iacute;culas &eacute; conhecido como SPH e foi criado na d&eacute;cada de 1970 por Gingold e Monaghan
+	            (1977) e por Lucy (1977) num contexto de simula&ccedil;&atilde;o de fluidos incompress&iacute;veis em
+	            astrof&iacute;sica (forma&ccedil;&atilde;o de gal&aacute;xias e supernovas).</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cada uma dessas t&eacute;cnicas tem
+	            seus pr&oacute;s e contras. De forma geral, AMR tem uma maior resolu&ccedil;&atilde;o para um n&uacute;mero
+	            igual de c&eacute;lulas na malha de part&iacute;culas devido ao c&aacute;lculo de vizinhan&ccedil;a, mesmo
+	            sendo feito de qualquer par&acirc;metro de flu&iacute;do. Entretanto o SPH se adapta principalmente pela
+	            densidade o que permite a forma&ccedil;&atilde;o de v&aacute;cuos, diferentemente do AMR que previne que o
+	            fluido desapare&ccedil;a de arestas. Por fim, com o aumento da entropia do sistema, o m&eacute;todo AMR
+	            tende a ter problemas frequentes com renderiza&ccedil;&atilde;o de fen&ocirc;menos n&atilde;o
+	            f&iacute;sicos. E j&aacute; que o SPH &eacute; um m&eacute;todo Lagrangeano, pode-se implement&aacute;-lo
+	            com conserva&ccedil;&atilde;o de massa, momento, energia e similaridade, a menos que isso n&atilde;o seja
+	            desejado, como a pr&oacute;pria conserva&ccedil;&atilde;o da entropia.</span></p>
+	    <p class="c10"><span class="c0">O objetivo deste trabalho &eacute; estudar e desenvolver um algoritmo
+	            semi-lagrangiano inspirado no SPH(Smoothed Particle Hydrodynamics) usando malhas para o c&aacute;lculo da
+	            vizinhan&ccedil;a, de forma que sua execu&ccedil;&atilde;o ocorra quase que totalmente em GPU. Para isso,
+	            foi usado a tecnologia GLSL com a API do OpenGL desenvolvida pelo grupo Khronos, e a linguagem de
+	            programa&ccedil;&atilde;o C++ para intermediar a comunica&ccedil;&atilde;o entre a CPU e a GPU.</span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c3"></span></p>
+	    <h1 class="c29" id="h.zgfioi4zjut3"><span>2 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aspectos
+	            te&oacute;ricos</span></h1>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">O movimento e escoamento dos fluidos seguem as leis da f&iacute;sica, assim como
+	            qualquer outro corpo. No entanto, devido &agrave; natureza complexa do c&aacute;lculo da
+	            acelera&ccedil;&atilde;o e velocidade de fluidos em escoamento, criar modelos que os representem de maneira
+	            apurada n&atilde;o &eacute; uma tarefa trivial. Para abordar essa quest&atilde;o, utiliza-se as
+	            equa&ccedil;&otilde;es de Navier-Stokes, que, apesar de muito &uacute;teis, apresentam um alto grau de
+	            dificuldade para serem solucionadas, exigindo a aplica&ccedil;&atilde;o de m&eacute;todos num&eacute;ricos
+	            (SOUZA; B&Iacute;SCARO, 2018).</span></p>
+	    <p class="c23"><span class="c0">Seguem as equa&ccedil;&otilde;es:</span></p>
+	    <p class="c1"><span class="c18"></span></p>
+	    <p class="c8"><img src="/img/sph/image1.png"></p>
+	    <p class="c8"><img src="/img/sph/image2.png"></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">Onde t representa o tempo, &rho; a densidade, p a press&atilde;o, g a
+	            acelera&ccedil;&atilde;o da gravidade, &mu; a viscosidade do fluido, v a velocidade e &nabla; o operador
+	            gradiente. Essas equa&ccedil;&otilde;es s&atilde;o utilizadas para definir o estado em um tempo futuro, t+1,
+	            a partir de seu estado atual, em tempo t.</span></p>
+	    <p class="c10"><span class="c0">O m&eacute;todo SPH, ou Smoothed Particle Hydrodynamics, &eacute; uma abordagem que
+	            se destaca entre os m&eacute;todos num&eacute;ricos utilizados para resolver as equa&ccedil;&otilde;es de
+	            Navier-Stokes em simula&ccedil;&otilde;es de fluidos. Ao discretizar o dom&iacute;nio de
+	            simula&ccedil;&atilde;o em um conjunto de part&iacute;culas, o SPH consegue contornar as dificuldades
+	            associadas ao uso de malhas convencionais. Em vez disso, a interpola&ccedil;&atilde;o suavizada entre as
+	            part&iacute;culas permite calcular as grandezas f&iacute;sicas em qualquer ponto do dom&iacute;nio,
+	            facilitando a simula&ccedil;&atilde;o de fen&ocirc;menos complexos.</span></p>
+	    <p class="c10"><span class="c0">Ele consiste na interpola&ccedil;&atilde;o das propriedades f&iacute;sicas de uma
+	            part&iacute;cula em uma posi&ccedil;&atilde;o arbitr&aacute;ria, bem como aproximar as derivadas espaciais a
+	            partir de um n&uacute;mero finito de part&iacute;culas adjacentes.</span></p>
+	    <p class="c10"><span class="c9">O m&eacute;todo &eacute; baseado no conceito de representa&ccedil;&atilde;o integral
+	            de uma fun&ccedil;&atilde;o cont&iacute;nua f : &#8486; &sub; &#8477;</span><span
+	            class="c38 c9">d</span><span class="c9">&nbsp;&rarr; &#8477;, onde &#8486; &eacute; um conjunto aberto
+	            contido em &#8477;</span><span class="c38 c9">d</span><span class="c0">. Essa representa&ccedil;&atilde;o
+	            &eacute; feita a partir da convolu&ccedil;&atilde;o de f com a distribui&ccedil;&atilde;o delta de Dirac, na
+	            qual, para todo x &isin; &#8486;, a fun&ccedil;&atilde;o f pode ser escrita na forma:</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c8"><img src="/img/sph/image3.png"></p>
+	    <p class="c10"><span class="c0">onde:</span></p>
+	    <p class="c8"><img src="/img/sph/image4.png"><span class="c31">, se </span><img src="/img/sph/image5.png"><span
+	            class="c31">&nbsp;e </span><img src="/img/sph/image6.png"><span class="c31">&nbsp;se </span><img
+	            src="/img/sph/image7.png"></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c9">Uma propriedade importante de </span><img src="/img/sph/image8.png"><span
+	            class="c9">&nbsp;&eacute; que qualquer fun&ccedil;&atilde;o </span><img src="/img/sph/image9.png"><span
+	            class="c9">definida como </span><img src="/img/sph/image10.png"><span class="c0">&nbsp;segue a
+	            propriedade:</span></p>
+	    <p class="c8"><img src="/img/sph/image11.png"></p>
+	    <p class="c10"><span class="c9">Na pr&aacute;tica, a distribui&ccedil;&atilde;o de Dirac (</span><img
+	            src="/img/sph/image12.png"><span class="c0">) &eacute; definida como limite de fun&ccedil;&otilde;es suaves
+	            W(x, h), que s&atilde;o conhecidas como fun&ccedil;&otilde;es n&uacute;cleo suave ou simplesmente
+	            n&uacute;cleo, onde o fator h define o raio de influ&ecirc;ncia de W e &eacute; conhecido como comprimento
+	            suave. Tipicamente, esses n&uacute;cleos devem satisfazer as seguintes propriedades:</span></p>
+	    <ol class="c7 lst-kix_wlty68f3xond-0 start" start="1">
+	        <li class="c13 li-bullet-0"><span class="c9">N&atilde;o negativo: </span><img src="/img/sph/image13.png"></li>
+	        <li class="c13 li-bullet-0"><span class="c9">Suavidade: </span><img src="/img/sph/image14.png"><span
+	                class="c0">&nbsp;com k &gt;1</span></li>
+	    </ol>
+	    <p class="c1"><span class="c0"></span></p>
+	    <ol class="c7 lst-kix_wlty68f3xond-0" start="3">
+	        <li class="c13 li-bullet-0"><span class="c9">suporte compacto </span><img src="/img/sph/image15.png"><span
+	                class="c9">&nbsp;para todo</span><img src="/img/sph/image16.png"></li>
+	        <li class="c13 li-bullet-0"><span class="c9">Parti&ccedil;&atilde;o da unidade:</span><img
+	                src="/img/sph/image17.png"></li>
+	        <li class="c13 li-bullet-0"><span class="c9">Converg&ecirc;ncia: </span><img src="/img/sph/image18.png"><span
+	                class="c0">&nbsp;quando h&rarr;0</span></li>
+	    </ol>
+	    <p class="c8 c14"><span class="c0"></span></p>
+	    <p class="c10"><span class="c9">De modo geral, a interpola&ccedil;&atilde;o utilizada no m&eacute;todo SPH aproxima
+	            uma determinada quantidade A</span><span class="c9 c15">i</span><span class="c9">&nbsp;em uma
+	            posi&ccedil;&atilde;o arbitr&aacute;ria x</span><span class="c9 c15">i</span><span class="c9">&nbsp;a partir
+	            de um n&uacute;mero finito de quantidades conhecidas A</span><span class="c9 c15">j</span><span
+	            class="c9">&nbsp;em posi&ccedil;&otilde;es x</span><span class="c9 c15">j</span><span
+	            class="c9">&nbsp;localizadas na vizinhan&ccedil;a de x</span><span class="c9 c15">i</span><span
+	            class="c0">.</span></p>
+	    <p class="c8"><img src="/img/sph/image19.png"></p>
+	    <p class="c10"><span class="c9">Onde A</span><span class="c9 c15">i</span><span class="c9">&nbsp;&eacute; a
+	            quantidade de uma determinada propriedade na part&iacute;cula i, &rho;</span><span
+	            class="c9 c15">j</span><span class="c9">&nbsp;e m</span><span class="c9 c15">j</span><span
+	            class="c9">&nbsp;s&atilde;o, respectivamente, a densidade e a massa locais. J&aacute; W</span><span
+	            class="c9 c15">ij</span><span class="c9">&nbsp;&eacute; a fun&ccedil;&atilde;o n&uacute;cleo avaliada
+	            em</span><img src="/img/sph/image20.png"><span class="c9">. &Eacute; importante ressaltar que cada
+	            part&iacute;cula i carrega seus atributos f&iacute;sicos, tais como a densidade &rho;</span><span
+	            class="c9 c15">i</span><span class="c9">, massa m</span><span class="c9 c15">i</span><span class="c9">,
+	            press&atilde;o p</span><span class="c9 c15">i</span><span class="c9">&nbsp;e volume &#8710;V</span><span
+	            class="c9 c15">i</span><span class="c9">. Al&eacute;m disso, ao longo do tempo t, a posi&ccedil;&atilde;o
+	            das part&iacute;culas x</span><span class="c9 c15">i</span><span class="c9">&nbsp;e outros atributos
+	            s&atilde;o &quot;transportados&quot; segundo a velocidade v</span><span class="c9 c15">i</span><span
+	            class="c0">&nbsp;da part&iacute;cula.</span></p>
+	    <p class="c23"><span class="c0">As equa&ccedil;&otilde;es espaciais s&atilde;o:</span></p>
+	    <p class="c8"><img src="/img/sph/image21.png"></p>
+	    <p class="c8"><img src="/img/sph/image22.png"></p>
+	    <p class="c8"><img src="/img/sph/image23.png"></p>
+	    <p class="c23"><span class="c9">onde A</span><span class="c9 c15">ij</span><span class="c9">&nbsp;= A</span><span
+	            class="c9 c15">i</span><span class="c9">&nbsp;&minus; A</span><span class="c9 c15">j</span><span
+	            class="c9">, x</span><span class="c9 c15">ij</span><span class="c9">&nbsp;= x</span><span
+	            class="c9 c15">i</span><span class="c9">&nbsp;&minus; x</span><span class="c9 c15 c39">j</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <h1 class="c29" id="h.osmetvvd2znu"><span>3 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metodologia</span>
+	    </h1>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">O objetivo deste projeto foi implementar o m&eacute;todo SPH sobre uma malha de
+	            pixels a fim de a us&aacute;-la para o c&aacute;lculo da vizinhan&ccedil;a, que &eacute; a parte mais
+	            custosa do algoritmo SPH tradicional. Para isso foi usado a tecnologia GLSL, ou OpenGL Shading Language, que
+	            &eacute; uma linguagem de programa&ccedil;&atilde;o de alto n&iacute;vel desenvolvida especificamente para
+	            trabalhar com a API OpenGL. Sendo uma parte essencial do pipeline gr&aacute;fico moderno, o GLSL permite aos
+	            desenvolvedores criar shaders personalizados, que s&atilde;o programas executados diretamente na GPU. Esses
+	            shaders t&ecirc;m o papel fundamental de controlar a apar&ecirc;ncia visual e o comportamento dos objetos
+	            renderizados em uma cena 3D ou 2D.</span></p>
+	    <p class="c10"><span class="c0">&nbsp;O c&oacute;digo &eacute; dividido em duas partes, uma para reintegrar as
+	            part&iacute;culas e a outra para o c&aacute;lculo do SPH que ser&aacute; chamado de simula&ccedil;&atilde;o.
+	            Sendo que ambas s&atilde;o executadas em shaders diferentes e a entrada de um &eacute; a sa&iacute;da do
+	            outro. </span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A reintegra&ccedil;&atilde;o tem a
+	            fun&ccedil;&atilde;o de integrar todas as part&iacute;culas com a malha de pixels para que o fluido tenha
+	            sua massa conservada. Assim, soma-se as massas das part&iacute;culas vizinhas sobrepostas e ponderando suas
+	            velocidades e posi&ccedil;&otilde;es de acordo com a massa.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J&aacute; a parte de
+	            Simula&ccedil;&atilde;o &eacute; onde realmente est&aacute; o que caracteriza esse algoritmo como uma
+	            variante do m&eacute;todo SPH. Ou seja, todas as equa&ccedil;&otilde;es de densidade, for&ccedil;as de
+	            viscosidade, gravidade entre outras defini&ccedil;&otilde;es do SPH est&atilde;o contidas nesta parte. A
+	            grande vantagem &eacute; que a vizinhan&ccedil;a j&aacute; est&aacute; calculada na grade de pixels. Em
+	            resumo &eacute; como se a reintegra&ccedil;&atilde;o mantivesse a estrutura coerente e a
+	            simula&ccedil;&atilde;o &eacute; o pr&oacute;prio SPH com a vizinhan&ccedil;a e algumas propriedades da
+	            part&iacute;cula j&aacute; calculadas. Esse m&eacute;todo permite tratar cada part&iacute;cula
+	            individualmente e de forma paralela o que faz esse algoritmo ser muito r&aacute;pido.</span></p>
+	    <p class="c10"><span class="c0">O algoritmo desenvolvido neste trabalho, embora modele um fluido com uma
+	            fronteira(que &eacute; a pr&oacute;pria tela de pixel), n&atilde;o usa part&iacute;culas diretamente, como
+	            no SPH, mas &eacute; na verdade um algoritmo baseado em grade semi-Lagrangiana.</span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <h2 class="c44" id="h.18l9wlv8hcqr"><span>3.1 - Simula&ccedil;&atilde;o</span></h2>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c10"><span class="c0">S&atilde;o diversos os aspectos pr&aacute;ticos e computacionais de uma
+	            implementa&ccedil;&atilde;o de escoamento de flu&iacute;dos baseada em SPH como, por exemplo, a
+	            defini&ccedil;&atilde;o correta dos par&acirc;metros, a estimativa da press&atilde;o, as
+	            condi&ccedil;&otilde;es de estabilidade que influenciam no passo de tempo, entre outros. A seguir
+	            ser&atilde;o discutidos os aspectos necess&aacute;rios para uma simula&ccedil;&atilde;o
+	            aceit&aacute;vel.</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <h3 class="c50" id="h.j0yst0i4p5et"><span>3.1.1 - </span><span class="c31 c48">Algoritmo b&aacute;sico</span></h3>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c10"><span class="c9">Uma vez que a massa &eacute; fixa em todas as part&iacute;culas, usaremos a
+	            defini&ccedil;&atilde;o apresentada no trabalho de Schechter e Bridson (2012), a qual estabelece </span><img
+	            src="/img/sph/image24.png"><span class="c9">. &nbsp;Onde h &eacute; o espa&ccedil;amento entre as
+	            part&iacute;culas e &rho;</span><span class="c9 c15">0</span><span class="c9">&nbsp;&eacute; a densidade de
+	            refer&ecirc;ncia do fluido. A press&atilde;o p</span><span class="c9 c15">i</span><span
+	            class="c0">&nbsp;&eacute; calculada a partir da densidade &rho;i de cada part&iacute;cula. Uma escolha comum
+	            para o c&aacute;lculo da press&atilde;o &eacute; a equa&ccedil;&atilde;o de Tait (MONAGHAN, 1994):</span>
+	    </p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c8"><img src="/img/sph/image25.png"></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c9">Na qual &rho;</span><span class="c9 c15">0</span><span class="c0">&nbsp;&eacute; a
+	            densidade do fluido em repouso, k e &lambda; s&atilde;o par&acirc;metros relacionados &agrave;s
+	            flutua&ccedil;&otilde;es de densidade do fluido.</span></p>
+	    <p class="c10"><span class="c0">O Algoritmo 1 representa os passos b&aacute;sicos de uma itera&ccedil;&atilde;o do
+	            m&eacute;todo SPH em CPU. Detalharemos cada um dos la&ccedil;os a seguir. &nbsp;</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c36 c45"></span></p>
+	    <table class="c43" id="alg1">
+	        <tr class="c22">
+	            <td class="c28" colspan="1" rowspan="1">
+	                <p class="c40"><span class="c30 c24">Algoritmo 1 - SPH</span></p>
+	            </td>
+	        </tr>
+	        <tr class="c22">
+	            <td class="c28" colspan="1" rowspan="1">
+	                <ol class="c7 lst-kix_tbqpb4mcnhkd-0 start" start="1">
+	                    <li class="c2 li-bullet-0"><span class="c24">&nbsp; &nbsp; Para cada </span><span
+	                            class="c25">part&iacute;cula i </span><span class="c30 c24">fa&ccedil;a:</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp; &nbsp;
+	                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span class="c26">//
+	                        Atualiza&ccedil;&atilde;o da vizinhan&ccedil;a </span></p>
+	                <ol class="c7 lst-kix_tbqpb4mcnhkd-0" start="2">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span class="c25 c42">Encontre
+	                            os k vizinhos mais pr&oacute;ximos da part&iacute;cula i ;</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c24">&nbsp; &nbsp; Para cada </span><span
+	                            class="c25">part&iacute;cula i </span><span class="c24">fa&ccedil;a:</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp; &nbsp;
+	                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span class="c26">//
+	                        Atualiza&ccedil;&atilde;o da densidade e press&atilde;o</span></p>
+	                <ol class="c7 lst-kix_tbqpb4mcnhkd-0" start="4">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&#9076;</span><span
+	                            class="c4">i</span><span class="c31">=&Sigma;</span><span class="c4">j</span><span
+	                            class="c21">k</span><span class="c4">&nbsp;</span><span class="c31">(m</span><span
+	                            class="c4">i</span><span class="c31">&nbsp;W</span><span class="c4">ij</span><span
+	                            class="c18">);</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;Calcule p</span><span
+	                            class="c4">i</span><span class="c31">&nbsp;usando &rho;</span><span class="c4">i</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c24">&nbsp; &nbsp; Para cada </span><span
+	                            class="c25">part&iacute;cula i </span><span class="c24">fa&ccedil;a:</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp; &nbsp;
+	                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span class="c26">//
+	                        Atualiza&ccedil;&atilde;o das for&ccedil;as atuantes </span></p>
+	                <ol class="c7 lst-kix_tbqpb4mcnhkd-0" start="7">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&#119813;</span><span
+	                            class="c4">i</span><span class="c21">press&atilde;o</span><span class="c31">= -m</span><span
+	                            class="c4">i</span><span class="c31">/&#9076;</span><span class="c4">i</span><span
+	                            class="c31">&#120513;p</span><span class="c39 c4">i</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&#119813;</span><span
+	                            class="c4">i</span><span class="c21">viscosas</span><span class="c31">= -m</span><span
+	                            class="c4">i</span><span class="c31">&eta; &#120513;</span><span class="c21">2</span><span
+	                            class="c31">&#119959;</span><span class="c39 c4">i</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&#119813;</span><span
+	                            class="c4">i</span><span class="c21">externas</span><span class="c31">= -m</span><span
+	                            class="c4">i</span><span class="c18">g</span></li>
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&#119813;</span><span
+	                            class="c4">i</span><span class="c31">(t)= &#119813;</span><span class="c4">i</span><span
+	                            class="c21">press&atilde;o</span><span class="c31">&nbsp;+ &#119813;</span><span
+	                            class="c4">i</span><span class="c21">viscosas</span><span class="c31">&nbsp;+
+	                            &#119813;</span><span class="c4">i</span><span class="c21">externas</span><span
+	                            class="c18">&nbsp;</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c24">Para cada </span><span class="c25">part&iacute;cula i
+	                        </span><span class="c24">fa&ccedil;a:</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c26">// Integra&ccedil;&atilde;o temporal</span></p>
+	                <ol class="c7 lst-kix_tbqpb4mcnhkd-0" start="12">
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;Atualize a
+	                            velocidade v</span><span class="c4">i</span><span class="c18">(t + &#8710;t)</span></li>
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;Atualize a
+	                            posi&ccedil;&atilde;o x</span><span class="c4">i</span><span class="c18">(t +
+	                            &#8710;t)</span></li>
+	                </ol>
+	            </td>
+	        </tr>
+	    </table>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">O primeiro la&ccedil;o do Algoritmo 1 executa uma das tarefas mais importantes em
+	            uma simula&ccedil;&atilde;o de SPH: a atualiza&ccedil;&atilde;o das rela&ccedil;&otilde;es de
+	            vizinhan&ccedil;a das part&iacute;culas. A literatura descreve principalmente duas abordagens para resolver
+	            esse problema: estruturas hier&aacute;rquicas, como kd-Trees (ADAMS et al., 2007; SIN; BARGTEIL; HODGINS,
+	            2009), e grades regulares (TESCHNER et al., 2003). Uma grande vantagem das estruturas hier&aacute;rquicas
+	            &eacute; a sua adaptabilidade, evitando desperd&iacute;cio de mem&oacute;ria, pois as c&eacute;lulas
+	            s&atilde;o constru&iacute;das apenas quando necess&aacute;rio. No entanto, o tempo de
+	            constru&ccedil;&atilde;o dessas estruturas &eacute; da ordem de O(n log(n)), enquanto o acesso &eacute;
+	            feito em O(log(n)). Por outro lado, as estruturas baseadas em grades utilizam uma fun&ccedil;&atilde;o hash
+	            e s&atilde;o constru&iacute;das em tempo O(n), permitindo acesso em tempo constante. O trabalho de Paiva et
+	            al. (2009) recomenda o uso de pelo menos 20 vizinhos por part&iacute;cula em simula&ccedil;&otilde;es 2D e
+	            56 em simula&ccedil;&otilde;es 3D. </span></p>
+	    <p class="c10"><span class="c0">A vantagem da estrutura com grade &eacute; que s&oacute; precisa ser
+	            constru&iacute;da uma vez e ap&oacute;s isso pode-se acess&aacute;-la de forma paralela, diferentemente da
+	            kd-Tree em que deve ser atualizada em cada ciclo. Assim, com a tecnologia GLSL, foi implementado aquela
+	            estrutura para que o acesso &agrave; vizinhan&ccedil;a seja feito em O(1) de forma paralelizada em
+	            GPU.</span></p>
+	    <p class="c10"><span class="c0">O segundo la&ccedil;o, que come&ccedil;a na linha 4 do Algoritmo 1, realiza a
+	            atualiza&ccedil;&atilde;o da densidade e da press&atilde;o em cada part&iacute;cula com base na densidade.
+	            Isso &eacute; conhecido na literatura como equa&ccedil;&atilde;o de estado (equa&ccedil;&atilde;o 9).
+	            Existem v&aacute;rios esquemas alternativos na literatura para avaliar com maior precis&atilde;o as
+	            for&ccedil;as de press&atilde;o atuantes na part&iacute;cula (SOLENTHALER; PAJAROLA, 2009; HE et al., 2012;
+	            CHENTANEZ; M&Uuml;LLER, 2011). Embora n&atilde;o seja o foco do nosso estudo, vale mencionar que a ideia
+	            geral por tr&aacute;s desses esquemas &eacute; dividir o c&aacute;lculo das for&ccedil;as de press&atilde;o
+	            em duas etapas: na primeira, uma velocidade intermedi&aacute;ria &eacute; calculada a partir das
+	            for&ccedil;as independentes da press&atilde;o; na segunda etapa, a componente dependente da press&atilde;o
+	            &eacute; computada levando em considera&ccedil;&atilde;o a velocidade intermedi&aacute;ria.</span></p>
+	    <p class="c10"><span class="c9">O terceiro la&ccedil;o, iniciado na linha 8 do mesmo algoritmo, atualiza todas as
+	            componentes das for&ccedil;as atuantes em cada part&iacute;cula. A for&ccedil;a resultante no instante t,
+	            F</span><span class="c9 c15">i</span><span class="c0">(t), ser&aacute; a acelera&ccedil;&atilde;o incidente
+	            em cada part&iacute;cula e ser&aacute; utilizada para a &uacute;ltima etapa de integra&ccedil;&atilde;o no
+	            tempo.</span></p>
+	    <p class="c10"><span class="c0">No Algoritmo implementado neste trabalho a vizinhan&ccedil;a &eacute; definida na
+	            pr&oacute;pria malha de pixels. O que faz com que a simula&ccedil;&atilde;o fique respons&aacute;vel pela
+	            atualiza&ccedil;&atilde;o da densidade de for&ccedil;as atuantes, a qual impacta apenas na velocidade e
+	            dire&ccedil;&atilde;o da part&iacute;cula. A reintegra&ccedil;&atilde;o por sua vez faz a
+	            integra&ccedil;&atilde;o temporal de forma que mantenha a estrutura coerente como ser&aacute; mostrado a
+	            seguir</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <h2 class="c44" id="h.kuwvvc9wnn0g"><span>3.2 - R</span><span class="c42 c51">eintegra&ccedil;&atilde;o</span></h2>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c10"><span class="c0">Neste algoritmo o estado de cada c&eacute;lula &eacute; definido pelos atributos da
+	            part&iacute;cula na c&eacute;lula e em qual dire&ccedil;&atilde;o ela est&aacute; se movendo. No nosso caso
+	            armazenamos a posi&ccedil;&atilde;o, velocidade e a massa da part&iacute;cula o que s&atilde;o 5 floats.
+	            Para combater o problema de perda de massa das part&iacute;culas e deixar o fluido mais suavizado foi usado
+	            uma fun&ccedil;&atilde;o de distribui&ccedil;&atilde;o que divide a massa da part&iacute;cula sobre uma
+	            &aacute;rea. Para encontrar a quantidade de massa e seu centro que cada part&iacute;cula depositada na
+	            c&eacute;lula em quest&atilde;o, &eacute; preciso integrar a distribui&ccedil;&atilde;o dentro dos limites
+	            da c&eacute;lula atual (E &eacute; a&iacute; que vem o nome - reintegrando as distribui&ccedil;&otilde;es
+	            das part&iacute;culas vizinhas). Ou seja, para calcular a massa de cada c&eacute;lula nos pr&oacute;ximos
+	            frames basta somar as intersec&ccedil;&otilde;es das distribui&ccedil;&otilde;es de massas das
+	            part&iacute;culas vizinhas com a c&eacute;lula. </span></p>
+	    <p class="c6"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 434.12px; height: 243.18px;"><img
+	                alt="" src="/img/sph/image51.png" id="fig1"
+	                style="width: 434.12px; height: 243.18px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c6"><span class="c0">Figura 1 - integra&ccedil;&atilde;o de part&iacute;culas</span></p>
+	    <p class="c6"><span class="c0">Fonte: Mykhailo Moroz(2020)</span></p>
+	    <p class="c6 c14"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">A ideia principal da reintegra&ccedil;&atilde;o &eacute; percorrer todos os vizinhos
+	            da c&eacute;lula atual (incluindo ela mesma), integrar a posi&ccedil;&atilde;o de cada part&iacute;cula
+	            vizinha e adicion&aacute;-la se ela acabar nesta c&eacute;lula. Na figura 1 est&aacute; uma
+	            visualiza&ccedil;&atilde;o de como isso se parece. Cada c&eacute;lula possui uma part&iacute;cula com uma
+	            massa representada pela opacidade. A c&eacute;lula vermelha &eacute; a c&eacute;lula atual para a qual
+	            queremos encontrar seu estado futuro, e a posi&ccedil;&atilde;o futura das part&iacute;culas &eacute;
+	            mostrada pela seta. Contudo, h&aacute; mais de uma part&iacute;cula se movendo para a c&eacute;lula
+	            vermelha. No final, todas as part&iacute;culas que acabam na mesma c&eacute;lula s&atilde;o somadas, e suas
+	            posi&ccedil;&otilde;es e velocidades s&atilde;o calculadas pela m&eacute;dia ponderada pela massa da
+	            part&iacute;cula. Em forma matem&aacute;tica, isso pode ser escrito da seguinte maneira:</span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c6"><img src="/img/sph/image26.png"></p>
+	    <p class="c6"><img src="/img/sph/image27.png"></p>
+	    <p class="c6"><img src="/img/sph/image28.png"></p>
+	    <p class="c10"><span class="c9">Onde </span><img src="/img/sph/image29.png"><span class="c9">&nbsp;&eacute; a massa da
+	            part&iacute;cula na c&eacute;lula i no passo de tempo t, </span><img src="/img/sph/image30.png"><span
+	            class="c9">&nbsp;&eacute; a posi&ccedil;&atilde;o da part&iacute;cula e </span><img
+	            src="/img/sph/image31.png"><span class="c9">&nbsp;&eacute; a velocidade. A fun&ccedil;&atilde;o </span><img
+	            src="/img/sph/image32.png"><span class="c9">&nbsp;&eacute; igual a 1 se o ponto </span><img
+	            src="/img/sph/image33.png"><span class="c0">&nbsp;est&aacute; dentro da c&eacute;lula i e zero caso
+	            contr&aacute;rio. &Delta;t &eacute; o intervalo de tempo.</span></p>
+	    <p class="c10"><span class="c9">Para uma c&eacute;lula quadrada, a fun&ccedil;&atilde;o </span><img
+	            src="/img/sph/image34.png"><span class="c0">&nbsp;&eacute; simplesmente:</span></p>
+	    <p class="c6"><img src="/img/sph/image35.png"></p>
+	    <p class="c10"><span class="c9">Onde H &eacute; a fun&ccedil;&atilde;o de passo de Heaviside multivariada e
+	        </span><img src="/img/sph/image36.png"><span class="c9">&nbsp;&eacute; o centro da c&eacute;lula i.</span></p>
+	    <p class="c6"><img src="/img/sph/image37.png"></p>
+	    <p class="c10"><span class="c0">Apesar de ser um algoritmo bastante simples, existe uma limita&ccedil;&atilde;o.
+	            Para garantir que contamos todas as part&iacute;culas vizinhas poss&iacute;veis que possam incidir nesta
+	            c&eacute;lula, ter&iacute;amos que percorrer toda a grade, o que &eacute; muito caro computacionalmente, ou
+	            limitar a velocidade m&aacute;xima das part&iacute;culas para tornar o raio de busca finito.</span></p>
+	    <p class="c10"><span class="c9">Obviamente, a segunda op&ccedil;&atilde;o &eacute; muito melhor em nosso contexto e
+	            caso seja desejado, &eacute; poss&iacute;vel limitar a velocidade de forma que as part&iacute;culas
+	            atravessem a grade em apenas 1 c&eacute;lula por frame. Dessa forma &eacute; mais econ&ocirc;mico fazer
+	            muitos passos menores com um vizinhan&ccedil;a de uma c&eacute;lula(de forma completamente paralelizada em
+	            GPU) em vez de contar todas as c&eacute;lulas em um &uacute;nico passo, j&aacute; que 9&radic;N &lt; N, onde
+	            N &eacute; o n&uacute;mero de c&eacute;lulas, e a raiz quadrada &eacute; porque precisamos aplicar a
+	            opera&ccedil;&atilde;o apenas um n&uacute;mero linear de vezes, em vez de aplic&aacute;-la para cada
+	            c&eacute;lula. E o 9 &eacute; o n&uacute;mero de vizinhos. Em 3D, seria equivalente a 27N</span><span
+	            class="c9 c38">1/3</span><span class="c0">&nbsp;&lt; N, o que &eacute; ainda mais eficiente. </span></p>
+	    <p class="c10"><span class="c9">H&aacute; diversas distribui&ccedil;&otilde;es que &eacute; poss&iacute;vel de usar,
+	            como por exemplo distribui&ccedil;&atilde;o normal. O problema de como calcul&aacute;-la, j&aacute; que
+	            n&atilde;o h&aacute; uma solu&ccedil;&atilde;o anal&iacute;tica para essa integral, e seria preciso integrar
+	            numericamente a distribui&ccedil;&atilde;o. Tamb&eacute;m pode-se tentar uma distribui&ccedil;&atilde;o
+	            circular uniforme ou uma distribui&ccedil;&atilde;o circular n&atilde;o uniforme a
+	            distribui&ccedil;&atilde;o &eacute; igual a </span><img src="/img/sph/image38.png"><span class="c9">&nbsp;para
+	        </span><img src="/img/sph/image39.png"><span class="c9">&nbsp;e igual a 0 para</span><img
+	            src="/img/sph/image40.png"><span class="c9">, onde </span><img src="/img/sph/image41.png"><span
+	            class="c0">&nbsp;&eacute; a posi&ccedil;&atilde;o da part&iacute;cula. A distribui&ccedil;&atilde;o mais
+	            simples que fornece uma solu&ccedil;&atilde;o anal&iacute;tica que &eacute; na verdade um quadrado uniforme
+	            alinhada aos eixos, para a qual a massa e o centro de massa s&atilde;o facilmente computadas de forma
+	            anal&iacute;tica com um raio de difus&atilde;o relativo ao tamanho da c&eacute;lula como mostrado na figura
+	            2.</span></p>
+	    <p class="c6"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 412.50px; height: 232.67px;"><img
+	                alt="" src="/img/sph/image48.png" id="fig2"
+	                style="width: 412.50px; height: 232.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c6"><span class="c0">Figura 2 - raio de difus&atilde;o</span></p>
+	    <p class="c6"><span class="c0">Fonte: Mykhailo Moroz(2020)</span></p>
+	    <p class="c6 c14"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">Nas figura 3 mostra uma exemplifica&ccedil;&atilde;o da distribui&ccedil;&atilde;o
+	            de massa das part&iacute;culas incidindo sobre a c&eacute;lula vermelha. Assim, a massa resultante da
+	            c&eacute;lula vermelha no pr&oacute;ximo frame &eacute; a soma das massas das relativas &aacute;reas de cada
+	            part&iacute;cula vizinha, como mostrado na figura 3.</span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c8"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 519.65px; height: 209.20px;"><img
+	                alt="" src="/img/sph/image45.png" id="fig3"
+	                style="width: 519.65px; height: 209.20px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c6"><span class="c0">Figura 3 - distribui&ccedil;&atilde;o de massa</span></p>
+	    <p class="c10"><span class="c0">A &aacute;rea relativa ser&aacute; a massa relativa e seu centro ser&aacute; o
+	            centro de massa. Isso pode ser implementado da seguinte forma:</span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c10 c14"><span class="c0"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <table class="c43" id="alg2">
+	        <tr class="c22">
+	            <td class="c28" colspan="1" rowspan="1">
+	                <p class="c40"><span class="c30 c24">Algoritmo 2 - Reintegra&ccedil;&atilde;o</span></p>
+	            </td>
+	        </tr>
+	        <tr class="c22">
+	            <td class="c28" colspan="1" rowspan="1">
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0 start" start="1">
+	                    <li class="c2 li-bullet-0"><span class="c18">massa = 0.</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c24">Para cada </span><span class="c25">part&iacute;cula k
+	                            vizinha da c&eacute;lula i</span><span class="c25 c15">i</span><span
+	                            class="c25">&nbsp;</span><span class="c30 c24">fa&ccedil;a:</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c36 c31">// Integra&ccedil;&atilde;o da posi&ccedil;&atilde;o da part&iacute;cula</span>
+	                </p>
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0" start="3">
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;P</span><span
+	                            class="c4">k</span><span class="c31">.X = P</span><span class="c4">k</span><span
+	                            class="c31">.V &#8710;t</span></li>
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;CellBox =
+	                            (</span><img src="/img/sph/image42.png"><span class="c31">&nbsp;- 0.5, </span><img
+	                            src="/img/sph/image42.png"><span class="c31">&nbsp;+ 0.5); </span><span class="c26">//caixa da
+	                            c&eacute;lula</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c26">// a caixa da part&iacute;cula</span></p>
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0" start="5">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;P</span><span
+	                            class="c4">k</span><span class="c18">Box =(x - diffusion_radius, x + diffusion_radius)
+	                        </span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c26">// caixa de intersec&ccedil;&atilde;o</span></p>
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0" start="6">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;P</span><span
+	                            class="c4">ik</span><span class="c18">Box =(max(CellBox, PkBox), min(CellBox, PkBox))
+	                        </span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;centro = 0.5*(P</span><span
+	                            class="c4">ik</span><span class="c31">Box.x + P</span><span class="c4">ik</span><span
+	                            class="c31">Box.y)</span><span class="c26">&nbsp;//centro de massa </span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;largura = P</span><span
+	                            class="c4">ik</span><span class="c31">Box.y - P</span><span class="c4">ik</span><span
+	                            class="c31">Box.x </span><span class="c26">//somente positivo</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c26">//&aacute;rea relativa</span></p>
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0" start="9">
+	                    <li class="c2 li-bullet-0"><span class="c31">&nbsp; &nbsp;
+	                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;m =
+	                            size.x*size.y/(diffusion_radius)</span><span class="c21">2</span><span class="c18">;</span>
+	                    </li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;</span><span
+	                        class="c31 c36">//adiciona atributos com o peso de cada part&iacute;cula</span><span
+	                        class="c18">&nbsp;</span></p>
+	                <ol class="c7 lst-kix_wh7g9jxbrayj-0" start="10">
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;massa += m</span></li>
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;P</span><span
+	                            class="c4">i</span><span class="c18">.X += centro * m</span></li>
+	                    <li class="c2 li-bullet-0"><span
+	                            class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;P</span><span
+	                            class="c4">i</span><span class="c31">.V += P</span><span class="c4">k</span><span
+	                            class="c18">.V * m</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c18">//normaliza&ccedil;&atilde;o</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">P</span><span class="c4">i</span><span class="c18">.X
+	                            /= massa</span></li>
+	                    <li class="c2 li-bullet-0"><span class="c31">P</span><span class="c4">i</span><span class="c18">.V
+	                            /= massa</span></li>
+	                </ol>
+	                <p class="c12"><span class="c31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+	            </td>
+	        </tr>
+	    </table>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9">Vale notar que
+	            ap&oacute;s essas opera&ccedil;&otilde;es &eacute; necess&aacute;rio limitar tanto a posi&ccedil;&atilde;o
+	            da part&iacute;cula para que ela n&atilde;o ultrapasse </span><img src="/img/sph/image43.png"><span
+	            class="c9 c46">&nbsp;</span><span class="c0">e a velocidade para que n&atilde;o seja maior que uma
+	            c&eacute;lula. Com essas restri&ccedil;&otilde;es apenas a transfer&ecirc;ncia de massa ocorre entre as
+	            c&eacute;lulas como ilustrado na figura 6:</span></p>
+	    <p class="c8"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 453.15px; height: 390.65px;"><img
+	                alt="" src="/img/sph/image46.png" id="fig4"
+	                style="width: 453.15px; height: 390.65px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c6"><span class="c0">Figura 4 - demonstra&ccedil;&atilde;o dos funcionamento da
+	            reintegra&ccedil;&atilde;o</span></p>
+	    <p class="c6 c14"><span class="c11"></span></p>
+	    <p class="c10"><span>Em (1) se v&ecirc; a caixa da part&iacute;cula tocando na extremidade de sua c&eacute;lula. Em
+	            seguida come&ccedil;a a transfer&ecirc;ncia de massa</span><span class="c46">&nbsp;</span><span
+	            class="c5">representada pelo grau de transpar&ecirc;ncia da part&iacute;cula. O limite da
+	            posi&ccedil;&atilde;o da part&iacute;cula para que ela n&atilde;o saia da c&eacute;lula faz com que a
+	            transfer&ecirc;ncia n&atilde;o seja imediata. Dessa forma se v&ecirc; que come&ccedil;am aparecer outras
+	            part&iacute;culas com massa na estrutura.</span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c10 c14"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <h1 class="c29" id="h.ylc0gmbrdghd"><span>4 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+	            class="c27">Resultados</span></h1>
+	    <p class="c1"><span class="c3"></span></p>
+	    <p class="c10"><span class="c0">Para realizar o experimento, utilizamos um computador com as seguintes
+	            especifica&ccedil;&otilde;es: CPU Intel Core i5 8250U e GPU Intel UHD Graphics 620, executando o sistema
+	            operacional Linux Ubuntu 22.04. A linguagem de programa&ccedil;&atilde;o C++ e o compilador g++, com apenas
+	            uma thread, foram empregados para a integra&ccedil;&atilde;o com a biblioteca OpenG, a qual foi usada para
+	            implementar o m&eacute;todo SPH.</span></p>
+	    <p class="c10"><span class="c0">O experimento realizado envolve duas fontes que inicializam as part&iacute;culas com
+	            uma determinada velocidade e massa, uma em verde e a outra azul. Essas fontes far&atilde;o com que seja
+	            poss&iacute;vel visualizar a fluidez do l&iacute;quido e como as part&iacute;culas interagem como mostrado
+	            na figura 5.</span></p>
+	    <p class="c8"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 302.67px;"><img
+	                alt="" src="/img/sph/image44.png" id="fig5"
+	                style="width: 601.70px; height: 302.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c8"><span class="c9">Figura 5 - Exemplo do funcionamento do algoritmo</span></p>
+	    <p class="c8 c14"><span class="c3"></span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A tabela 1 por sua vez mostra os
+	            resultados da execu&ccedil;&atilde;o do experimento citado at&eacute; o momento em que todos os pixels
+	            apresentam massa diferente de zero. Nela &eacute; medido a varia&ccedil;&atilde;o de quadros por segundo, e
+	            o tempo m&eacute;dio de execu&ccedil;&atilde;o da reintegra&ccedil;&atilde;o e da simula&ccedil;&atilde;o em
+	            diferentes resolu&ccedil;&otilde;es.</span></p>
+	    <p class="c8"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 570.43px; height: 168.34px;"><img
+	                alt="" src="/img/sph/image50.png" id="tab1"
+	                style="width: 570.43px; height: 168.34px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c8"><span class="c0">Tabela 1 - resultado do experimento</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c10"><span class="c0">Os resultados evidenciam que &agrave; medida que a resolu&ccedil;&atilde;o aumenta,
+	            a implementa&ccedil;&atilde;o desse m&eacute;todo se torna mais dispendiosa, uma consequ&ecirc;ncia
+	            previs&iacute;vel, pois a GPU deve calcular um maior n&uacute;mero de part&iacute;culas. No entanto, o uso
+	            da malha de pixels para o c&aacute;lculo de vizinhan&ccedil;a permite que o m&eacute;todo seja completamente
+	            paralelizado, conferindo uma vantagem significativa em rela&ccedil;&atilde;o aos m&eacute;todos tradicionais
+	            que realizam tal c&aacute;lculo na CPU.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A diferen&ccedil;a entre o tempo de
+	            reintegra&ccedil;&atilde;o e de simula&ccedil;&atilde;o se d&aacute; pois o algoritmo n&atilde;o realiza a
+	            simula&ccedil;&atilde;o em part&iacute;culas que tenham massa igual a zero. Diferentemente da
+	            reintegra&ccedil;&atilde;o, que precisa verificar o destino de todas as part&iacute;culas. Em
+	            cen&aacute;rios em que todos os pixel come&ccedil;am com alguma massa nota-se um aumento significativo de
+	            at&eacute; 6ms, ao mesmo tempo em que sempre que se inicia o experimento h&aacute; um pico de quadros por
+	            segundos. Isso mostra que apesar da reintegra&ccedil;&atilde;o ter um tempo constante a
+	            simula&ccedil;&atilde;o interfere no tempo de acordo com a quantidade de part&iacute;culas com massa.</span>
+	    </p>
+	    <p class="c23"><span class="c0">Vale ressaltar que a simplicidade do modelo SPH implementado pode ter
+	            contribu&iacute;do para a fluidez da simula&ccedil;&atilde;o, pois foram considerados apenas c&aacute;lculos
+	            b&aacute;sicos, como for&ccedil;a de viscosidade, press&atilde;o e gravidade. Essa abordagem pode ter
+	            influenciado positivamente no desempenho do m&eacute;todo.</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c23"><span class="c0">Ademais, a capacidade de renderizar um grande n&uacute;mero de
+	            &quot;part&iacute;culas&quot; em um tempo aceit&aacute;vel mostra a efici&ecirc;ncia do m&eacute;todo em
+	            compara&ccedil;&atilde;o com outras abordagens tradicionais de SPH devido principalmente ao c&aacute;lculo
+	            de vizinhan&ccedil;a ocorrer na GPU.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c23"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 308.00px;"><img
+	                alt="" src="/img/sph/image47.png" id="fig6"
+	                style="width: 601.70px; height: 308.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c8"><span class="c0">Figura 6 - Animando o fluido em uma imagem</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <p class="c1"><span class="c11"></span></p>
+	    <h1 class="c29" id="h.c399e8x4l9gr"><span>5 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+	            class="c27">Conclus&atilde;o</span></h1>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O m&eacute;todo SPH &eacute;
+	            altamente flex&iacute;vel e eficiente para simular escoamentos complexos de fluidos. Ao representar o fluido
+	            como um conjunto de part&iacute;culas, ele consegue lidar de forma mais precisa com colis&otilde;es, ondas e
+	            intera&ccedil;&otilde;es com s&oacute;lidos. O uso de malha fez com que houvesse uma restri&ccedil;&atilde;o
+	            no espa&ccedil;o de atua&ccedil;&atilde;o das part&iacute;culas, no entanto ganhou significativo desempenho
+	            com o c&aacute;lculo de vizinhan&ccedil;a.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A tecnologia GLSL possibilitou o
+	            desenvolvimento de shaders que s&atilde;o programas executados em GPU. Dessa forma o algoritmo implementado
+	            neste artigo foi completamente paralelizado, o que possibilitou a renderiza&ccedil;&atilde;o de
+	            milh&otilde;es de part&iacute;culas em tempo real.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A grande vantagem deste algoritmo
+	            &eacute; a velocidade de execu&ccedil;&atilde;o devido a paraleliza&ccedil;&atilde;o. No entanto, h&aacute;
+	            ainda a desvantagem de que o espa&ccedil;o de atua&ccedil;&atilde;o do fluido &eacute; limitado pela
+	            pr&oacute;pria grade, e a velocidade da part&iacute;cula tamb&eacute;m n&atilde;o pode ser maior do que o
+	            raio de vizinhan&ccedil;a, caso contr&aacute;rio haver&aacute; perda de massa.</span></p>
+	    <p class="c23"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al&eacute;m disso, a possibilidade
+	            de colocar mais propriedades na part&iacute;culas faz com que seja poss&iacute;vel criar
+	            simula&ccedil;&otilde;es mais complexas e precisas de flu&iacute;dos em tempo real. &Eacute; incr&iacute;vel
+	            imaginar como seriam os limites desse algoritmo em placas de v&iacute;deo modernas.</span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <p class="c1"><span class="c0"></span></p>
+	    <h1 class="c29" id="h.bhrfmw9mcqum"><span>6 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R</span><span
+	            class="c27">efer&ecirc;ncias bibliogr&aacute;ficas</span></h1>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">ADAMS, B. et al. Adaptively sampled particle fluids. ACM Trans. Graph., ACM,</span>
+	    </p>
+	    <p class="c23"><span class="c5">New York, NY, USA, v. 26, n. 3, jul. 2007. ISSN 0730-0301. Dispon&iacute;vel
+	            em:</span></p>
+	    <p class="c23"><span class="c5">&#10216;http://doi.acm.org/10.1145/1276377.1276437&#10217;.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">CHENTANEZ, N.; M&Uuml;LLER, M. Real-time eulerian water simulation using</span></p>
+	    <p class="c23"><span class="c5">a restricted tall cell grid. ACM Trans. Graph., ACM, New York, NY, USA,</span></p>
+	    <p class="c23"><span class="c5">v. 30, n. 4, p. 82:1&ndash;82:10, jul. 2011. ISSN 0730-0301. Dispon&iacute;vel em:
+	            &#10216;http:</span></p>
+	    <p class="c23"><span class="c5">//doi.acm.org/10.1145/2010324.1964977&#10217;.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span>COSSINS, P. Smoothed Particle Hydrodynamics. arXiv, Sat, 2 Oct 2010 19:10:31 UTC
+	            dispon&iacute;vel em: &#10216;</span><span>https://doi.org/10.48550/arXiv.1007.1245&#10217;</span><span
+	            class="c5">.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">FRISCH, U.; HASSLACHER, B.; POMEAU, Y. Lattice-Gas Automata for the Navier-Stokes
+	            Equation. In: Phys. Rev. Lett., v. 56, n. 14, p. 1505-1508, 1986. Dispon&iacute;vel em:
+	            https://link.aps.org/doi/10.1103/PhysRevLett.56.1505.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">GINGOLD, R. A.; MONAGHAN, J. J. Smoothed particle hydrodynamics - Theory and
+	            application to non-spherical stars. Monthly Notices of the Royal Astronomical Society, v. 181, p.
+	            375&ndash;389, nov. 1977.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">MOROZ, M. Reintegration tracking, Mykhailo Moroz &#39;s blogs, aug. 2020,
+	            dispon&iacute;vel em: &#10216;https://michaelmoroz.github.io/Reintegration-Tracking/&#10217;.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">MONAGHAN, J. Simulating free surface flows with sph. J. Comput. Phys., Academic
+	            Press Professional, Inc., San Diego, CA, USA, v. 110, n. 2, p. 399&ndash;406, fev. 1994. ISSN 0021-9991.
+	            Dispon&acute;&#305;vel em: &#10216;http://dx.doi.org/10.1006/jcph.1994.1034&#10217;.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">PAIVA, A. et al. Simula&ccedil;&atilde;o de Fluidos sem Malha:Uma
+	            introdu&ccedil;&atilde;o ao m&eacute;todo SPH. [S.l.]: 27th Col&oacute;quio Brasileiro de Matem&aacute;tica,
+	            IMPA, 2009. ISBN 9788524403026.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">Schechter, Hagit and Bridson, Robert. &quot;Ghost SPH for animating water.&quot; ACM
+	            Transactions on Graphics 31 (2012): 1-8. DOI: 10.1145/2185520.2335412.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">SOUZA, T.; B&Iacute;SCARO, H. Simula&ccedil;&atilde;o computacional do sangue usando
+	            o m&eacute;todo smoothed particle hydrodynamics (SPH). In: SBC. Anais Estendidos do XIV Simp&oacute;sio
+	            Brasileiro de Sistemas de Informa&ccedil;&atilde;o. [S.l.], 2018. p. 118&ndash;121.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	    <p class="c23"><span class="c5">TESCHNER, M. et al. Optimized spatial hashing for collision detection of deformable
+	            objects. In: ERTL, T. et al. (Ed.). Vision, modeling, and visualization 2003. Berlin: AKA, 2003. p.
+	            47&ndash;54.</span></p>
+	    <p class="c1"><span class="c5"></span></p>
+	
+	
+</div>

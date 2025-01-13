@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<div class="c75 doc-content" xmlns:th="http://www.thymeleaf.org" th:fragment="vrp">
+	<link rel="stylesheet" th:href="@{/css/vrp.css}"/>
+	
+	
+	
+	<p class="c44"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 142.99px; height: 59.84px;"><img
+	                alt="" src="/img/vrp/image16.jpg"
+	                style="width: 142.99px; height: 59.84px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c11 c33"><span class="c4"></span></p>
+	    <p class="c51"><span class="c4">UNIVERSIDADE DE S&Atilde;O PAULO</span></p>
+	    <p class="c51"><span class="c4">&nbsp;ESCOLA DE ARTES, CI&Ecirc;NCIAS E HUMANIDADES</span></p>
+	    <p class="c23"><span class="c4">CURSO DE BACHARELADO EM SISTEMAS DE INFORMA&Ccedil;&Atilde;O</span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c37 c54 c11"><span class="c4"></span></p>
+	    <p class="c23"><span class="c4">Arthur Prince de Almeida</span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c23 c11"><span class="c4"></span></p>
+	    <p class="c11 c17"><span class="c4"></span></p>
+	    <h1 class="c51"><span class="c5 c7">Problema de roteamento de ve&iacute;culos din&acirc;mico </span></h1>
+	    <h1 class="c51"><span class="c5 c7">Aplica&ccedil;&atilde;o nas inst&acirc;ncias da loggibud</span></h1>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c11 c23"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c23 c11"><span class="c5 c7"></span></p>
+	    <p class="c54 c79 c11 c94"><span class="c5 c7"></span></p>
+		<div class="c139">
+		  <p>São Paulo</p>
+		  <p>2022</p>
+		</div>
+	    <p class="c64"><span class="c4">Arthur Prince de Almeida</span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c84 c11"><span class="c4"></span></p>
+	    <h1 class="c129"><span class="c5 c7">Problema de roteamento de ve&iacute;culos din&acirc;mico
+	            Aplica&ccedil;&atilde;o nas inst&acirc;ncias da loggibud</span></h1>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c15 c11"><span class="c5 c7"></span></p>
+	    <p class="c132 c141"><span class="c4">Monografia apresentada &agrave; Escola de Artes, Ci&ecirc;ncias e Humanidades
+	            da Universidade de S&atilde;o Paulo, como parte dos requisitos exigidos na disciplina ACH 2017 &ndash;
+	            Projeto Supervisionado ou de Gradua&ccedil;&atilde;o I, para obten&ccedil;&atilde;o do t&iacute;tulo de
+	            Bacharelado em Sistemas de Informa&ccedil;&atilde;o.</span></p>
+	    <p class="c106"><span class="c4">Modalidade: TCC curto (1 semestre) &ndash; individual. Orientadora: Karla Roberta
+	            Pereira Sampaio Lima</span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c1 c11"><span class="c4"></span></p>
+	    <p class="c11 c87"><span class="c4"></span></p>
+		<div class="c139">
+		  <p>São Paulo</p>
+		  <p>2022</p>
+		</div>
+	    <h1 class="c54 c69"><span class="c5 c7">Resumo</span></h1>
+	    <p class="c0 c79"><span class="c5 c7"></span></p>
+	    <p class="c0 c79"><span class="c5 c7"></span></p>
+	    <p class="c19"><span class="c9">Prince, Arthur de almeida. </span><span class="c9 c66">Problema de roteamento de
+	            ve&iacute;culos din&acirc;mico: </span><span class="c4">Aplica&ccedil;&atilde;o nas inst&acirc;ncias da
+	            loggibud. 2022. 16 f. Monografia (Bacharelado em Sistemas de Informa&ccedil;&atilde;o)</span></p>
+	    <p class="c51"><span class="c4">&ndash; Escola de Artes, Ci&ecirc;ncias e Humanidades, Universidade de S&atilde;o
+	            Paulo, S&atilde;o Paulo, 11/07/2022.</span></p>
+	    <p class="c15 c54 c79 c11"><span class="c4"></span></p>
+	    <p class="c54 c79 c132"><span class="c4">A log&iacute;stica por tr&aacute;s da aloca&ccedil;&atilde;o de
+	            ve&iacute;culos para entrega de pacotes est&aacute; sujeita a uma explos&atilde;o combinat&oacute;ria de
+	            possibilidades. O problema de roteamento de ve&iacute;culos &eacute; uma &aacute;rea de estudo de
+	            programa&ccedil;&atilde;o inteira que busca encontrar solu&ccedil;&otilde;es satisfat&oacute;rias em tempo
+	            vi&aacute;vel. O trabalho em quest&atilde;o busca estudar o problema de roteamento de ve&iacute;culos
+	            din&acirc;mico, o problema que exige o menor tempo de execu&ccedil;&atilde;o poss&iacute;vel. Seu contexto
+	            &eacute; nas inst&acirc;ncias da loggibud, o qual se refere a uma base de dados conhecida da empresa loggi
+	            para testes de benchmark de algoritmos de roteamento. Tendo isso em vista, este trabalho aborda sobre
+	            classifica&ccedil;&atilde;o de problema de roteamento de ve&iacute;culos, o problema da loggi e suas
+	            peculiaridade. E por fim prop&otilde;e um algoritmo baseado na meta-heur&iacute;stica Simulated annealing e
+	            em grupos naturais para resolu&ccedil;&atilde;o din&acirc;mica e estoc&aacute;stica do problema.</span></p>
+	    <p class="c48 c11 c79"><span class="c4"></span></p>
+	    <p class="c54 c79 c138"><span class="c4">Palavras-chaves: Problema Din&acirc;mico de Roteamento de Ve&iacute;culos,
+	            Roteamento Online, Simulated annealing, Kmeans. Loggibud</span></p>
+	    <h1 class="c64"><span class="c5 c7">Lista de figuras</span></h1>
+	    <p class="c71"><span class="c13"><a class="c3" href="#fig1">Figura 1 &nbsp;</a></span><span class="c9"><a
+	                class="c3" href="#fig1">exemplo de PRV</a></span><span
+	            class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c38"><span class="c13"><a class="c3" href="#fig2">Figura 2 
+			&nbsp;</a></span><span class="c9"><a class="c3"
+	                href="#fig2">divis&otilde;es de milhas</a></span><span
+	            class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c8"><span class="c13"><a class="c3" href="#fig3">Figura 3 
+			&nbsp;</a></span><span class="c9"><a class="c3"
+	                href="#fig3">problema de &uacute;ltima milha</a></span><span
+	            class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c38"><span class="c13"><a class="c3" href="#fig4">Figura 4 &nbsp;</a></span><span class="c9"><a
+	                class="c3" href="#fig4">exemplo de Kmeans</a></span><span
+	            class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c8"><span class="c13"><a class="c3" href="#fig5">Figura 5 &nbsp;</a></span><span class="c9"><a
+	                class="c3" href="#fig5">novo consumidor chega no sorter</a></span><span
+	            class="c9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c38"><span class="c5 c13"><a class="c3" href="#fig6">Figura 6 &nbsp;</a></span><span class="c4"><a
+	                class="c3" href="#fig6">todas as possibilidades de inser&ccedil;&atilde;o com PFIH</a></span><span
+	            class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c8"><span class="c13"><a class="c3" href="#fig7">Figura 7 </a>
+		</span><span class="c4"><a class="c3" href="#fig7">&nbsp;troca</a></span>
+	    <p class="c38"><span class="c13"><a class="c3" href="#fig8">Figura 8
+	                &nbsp;inser&ccedil;&atilde;o</a></span></p>
+	    <p class="c8"><span class="c13"><a class="c3" href="#fig9">Figura 9 &nbsp;embaralhamento</a></span><span
+	            class="c13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+	    <p class="c8"><span class="c13"><a class="c3" href="#fig10">Figura 10 invers&atilde;o</a></span><span
+	            class="c13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c9"><a class="c3"
+	                href="#h.gjdgxs"></a></span></p>
+					
+					
+					
+	    <h1 class="c39"><span class="c5 c7">Lista de algoritmos</span></h1>
+		
+	    <p class="c71"><span class="c9 c92"><a class="c3" href="#alg1">Algoritmo
+	                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pr&eacute;-processamento com Kmeans e algoritmo de
+	                Prim</a></span><span class="c9 c41"><a class="c3"
+	                href="#alg1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span class="c4"><a
+	                class="c3" href="#alg1"></a></span></p>
+					
+	    <p class="c38"><span class="c92 c9"><a class="c3" href="#alg2">
+			Algoritmo 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algoritmo de
+	            execu&ccedil;&atilde;o &ndash; inserir pacotes usando SANM</a></span><span
+	            class="c41 c9">				<a class="c3" href="#alg2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</span><span class="c4"></span></p>
+				
+				
+	    <p class="c64"><span class="c5 c7">Lista de abreviaturas e siglas</span></p>
+	    <p class="c1 c11"><span class="c5 c7"></span></p>
+	    <p class="c11 c15"><span class="c5 c7"></span></p>
+	    <p class="c74"><span class="c4">PRV &nbsp; &nbsp;Problema de roteamento de ve&iacute;culos</span></p>
+	    <p class="c65"><span class="c4">PRVC &nbsp; Problema de roteamento de ve&iacute;culos capacitados</span></p>
+	    <p class="c124"><span class="c4">PRVCE Problema de roteamento de ve&iacute;culos com coleta e entrega PRVJT Problema
+	            de roteamento de ve&iacute;culos com janela de tempo PRVD &nbsp;Problema de roteamento de ve&iacute;culos
+	            din&acirc;mico</span></p>
+	    <p class="c81"><span class="c4">PRVE &nbsp; Problema de roteamento de ve&iacute;culos estoc&aacute;stico</span></p>
+	    <p class="c85"><span class="c4">PRVDE &nbsp;Problema de roteamento de ve&iacute;culos din&acirc;mico e
+	            estoc&aacute;stico</span></p>
+	    <p class="c112"><span class="c5 c66 c113">Sum&aacute;rio</span></p>
+	    <ol class="c27 lst-kix_list_9-0 start" start="1">
+	        <li class="c63 c122 li-bullet-0"><span class="c4"><a class="c3"
+	                    href="#h.gjdgxs">Introdu&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</a></span>
+	        </li>
+	        <li class="c15 c63 li-bullet-0"><span class="c4"><a class="c3" href="#h.30j0zll">Revis&atilde;o
+	                    bibliogr&aacute;fica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</a></span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_9-1 start" start="1">
+	        <li class="c87 c96 li-bullet-1"><span class="c5 c13"><a class="c3" href="#h.1fob9te">Representa&ccedil;&atilde;o
+	                    matem&aacute;tica do problema de roteamento de ve&iacute;culo
+	                    est&aacute;tico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span class="c4"><a
+	                    class="c3" href="#h.1fob9te">2</a></span></li>
+	        <li class="c15 c35 li-bullet-2"><span class="c5 c13"><a class="c3" href="#h.3znysh7">Principais classes do
+	                    problema de roteamento de
+	                    ve&iacute;culos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span class="c4"><a
+	                    class="c3" href="#h.3znysh7">3</a></span></li>
+	        <li class="c87 c35 li-bullet-3"><span class="c5 c13"><a class="c3" href="#h.2et92p0">Problema de roteamento de
+	                    ve&iacute;culo din&acirc;mico e
+	                    estoc&aacute;stico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span class="c4"><a
+	                    class="c3" href="#h.2et92p0">4</a></span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_9-0" start="3">
+	        <li class="c15 c63 li-bullet-4"><span class="c5 c13"><a class="c3" href="#h.tyjcwt">O </a></span><span
+	                class="c4"><a class="c3" href="#h.tyjcwt">problema da
+	                    Loggi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</a></span></li>
+	        <li class="c87 c63 li-bullet-0"><span class="c5 c13"><a class="c3" href="#h.3dy6vkm">E</a></span><span
+	                class="c4"><a class="c3" href="#h.3dy6vkm">xplica&ccedil;&atilde;o do
+	                    algoritmo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9</a></span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_9-1 start" start="1">
+	        <li class="c15 c96 li-bullet-1"><span class="c5 c13"><a class="c3"
+	                    href="#h.1t3h5sf">Introdu&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span
+	                class="c4"><a class="c3" href="#h.1t3h5sf">9</a></span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_8-1 start" start="1">
+	        <li class="c87 c35 li-bullet-2"><span
+	                class="c5 c13">Pr&eacute;-processamento&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+	                class="c4">9</span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_7-1 start" start="1">
+	        <li class="c15 c96 li-bullet-1"><span
+	                class="c5 c13">Execu&ccedil;&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+	                class="c4">11</span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_7-2 start" start="1">
+	        <li class="c15 c107 li-bullet-5"><span class="c5 c13">Simulated
+	                annealing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">11</span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_6-2 start" start="1">
+	        <li class="c67 li-bullet-6"><span class="c5 c13">Push-Foward insertion heuristic
+	                (PFIH)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">13</span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_5-2 start" start="1">
+	        <li class="c15 c107 li-bullet-5"><span class="c5 c13">Solu&ccedil;&atilde;o de
+	                vizinhan&ccedil;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">14</span></li>
+	    </ol>
+	    <ol class="c27 lst-kix_list_9-0" start="5">
+	        <li class="c87 c63 li-bullet-4"><span class="c4"><a class="c3"
+	                    href="#h.4d34og8">Conclus&atilde;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</a></span></li>
+	    </ol>
+	    <p class="c8"><span class="c4"><a class="c3" href="#h.2s8eyo1">Refer&ecirc;ncias
+	                bibliogr&aacute;ficas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</a></span></p>
+	    <p class="c11 c130"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-0 start" start="1">
+	        <li class="c1 c133 li-bullet-7">
+	            <h1 id="h.gjdgxs" style="display:inline"><span class="c5 c7">Introdu&ccedil;&atilde;o</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c11 c36"><span class="c5 c7"></span></p>
+	    <p class="c18"><span class="c4">O aumento da internet em nosso cotidiano e a facilidade de fazer pagamentos online
+	            criaram um ambiente favor&aacute;vel para o com&eacute;rcio eletr&ocirc;nico. As estruturas de varejo
+	            globais est&atilde;o ganhando cada vez mais espa&ccedil;o nesse ambiente. Todavia, esse novo mercado trouxe
+	            novos desafios para a log&iacute;stica de entrega de produtos.</span></p>
+	    <p class="c18"><span class="c4">O problema de roteamento de ve&iacute;culo &ndash; PRV (vehicle routing problem)
+	            &eacute; um dos problemas mais estudados na &aacute;rea da computa&ccedil;&atilde;o. Em uma das suas
+	            inst&acirc;ncias mais simples est&aacute; o famoso problema do caixeiro viajante (traveling salesman
+	            problem), o qual consiste em tra&ccedil;ar a rota com menor dist&acirc;ncia de modo que o ve&iacute;culo
+	            passe por diversos pontos especificados no problema. J&aacute; em sua inst&acirc;ncia mais simples fala-se
+	            de um problema np-dif&iacute;cil. Portanto, &eacute; muito comum na literatura encontrar algoritmos que usam
+	            heur&iacute;sticas ou m&eacute;todos de programa&ccedil;&atilde;o inteira.</span></p>
+	    <p class="c18"><span class="c4">Loggi &eacute; uma empresa que trabalha com a log&iacute;stica das entregas baseada
+	            em um modelo de economia compartilhada como Uber, Rappi e Ifood. Entregadores independentes usam a
+	            plataforma Loggi online para fazer entregas de &uacute;ltima milha em seus pr&oacute;prios ve&iacute;culos.
+	            O maior desafio da Loggi &eacute; criar uma grande rede log&iacute;stica sustent&aacute;vel para entregas de
+	            produtos no dia que foi encomendado em todo Brasil.</span></p>
+	    <p class="c18"><span class="c9">O objetivo deste trabalho &eacute; estudar t&eacute;cnicas de roteamento de
+	            ve&iacute;culos usando as inst&acirc;ncias de dados disponibilizadas pela loggi, a loggibud. Para isso
+	            &eacute; necess&aacute;rio primeiramente caracterizar os tipos de PRV presente dentro do problema. Em
+	            seguida, estudar a base de dados e a API disponibilizado pela loggi para resolver o problema. E por fim
+	            propor uma solu&ccedil;&atilde;o.</span></p>
+	    <ol class="c27 lst-kix_list_4-0" start="2">
+	        <li class="c98 li-bullet-8">
+	            <h1 id="h.30j0zll" style="display:inline"><span class="c5 c7">Revis&atilde;o bibliogr&aacute;fica</span>
+	            </h1>
+	        </li>
+	    </ol>
+	    <p class="c36 c11"><span class="c5 c7"></span></p>
+	    <ol class="c27 lst-kix_list_4-1 start" start="1">
+	        <li class="c1 c116 li-bullet-9">
+	            <h1 id="h.1fob9te" style="display:inline"><span class="c5 c7">Representa&ccedil;&atilde;o matem&aacute;tica
+	                    do problema de roteamento de ve&iacute;culo est&aacute;tico</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c40 c11"><span class="c5 c7"></span></p>
+	    <p class="c14"><span class="c4">&Eacute; dito que um PRV &eacute; est&aacute;tico quando &eacute; conhecido todas as
+	            informa&ccedil;&otilde;es das entregas previamente. O c&aacute;lculo de sua solu&ccedil;&atilde;o
+	            &oacute;tima &eacute; praticamente invi&aacute;vel devido ao seu crescimento de complexidade exponencial.
+	            Uma das poss&iacute;veis t&eacute;cnicas para resolv&ecirc;-lo poderia ser por um sistema de
+	            equa&ccedil;&otilde;es lineares inteiras. Portanto, essa sess&atilde;o ser&aacute; focada na
+	            formula&ccedil;&atilde;o matem&aacute;tica do problema, que al&eacute;m de ser suficiente para a
+	            resolu&ccedil;&atilde;o do problema est&aacute;tico tamb&eacute;m, &eacute; necess&aacute;rio para a
+	            compreens&atilde;o do problema.</span></p>
+	    <p class="c14"><span class="c9">&ldquo;A import&acirc;ncia e influ&ecirc;ncia do modo de formular um problema de
+	            otimiza&ccedil;&atilde;o, especialmente em &aacute;reas complexas como as de roteamento, recobrimento etc.
+	            devem ser bem entendidas. O motivo &eacute; evidente: a formula&ccedil;&atilde;o ter&aacute; impacto direto
+	            no desempenho dos algoritmos de solu&ccedil;&atilde;o.&rdquo; (Goldbarg e Luna, 2000).</span></p>
+	    <p class="c111"><span class="c4">O problema da loggibud pode ser formulado da seguinte maneira: um conjunto de
+	            ve&iacute;culos id&ecirc;nticos V, com capacidade q, necessitam realizar entregas de pacotes em uma
+	            regi&atilde;o, representada por um grafo direcionado G. O grafo G consiste em |C|+1 v&eacute;rtice, em que
+	            os consumidores a serem visitados s&atilde;o representados pelo conjunto C = {c</span><span
+	            class="c5 c56">1</span><span class="c4">, c</span><span class="c5 c56">2</span><span class="c4">, ...,
+	            c</span><span class="c5 c56">n</span><span class="c4">}, e o dep&oacute;sito &eacute; representado por c0.
+	            Logo o conjunto de v&eacute;rtices do grafo G &eacute; representado por N = C </span><span
+	            class="c5 c9 c26">&cup; </span><span class="c4">{c</span><span class="c5 c56">0</span><span class="c4">}.
+	            J&aacute; as arestas representam a dist&acirc;ncia entre cada consumidor e est&atilde;o associadas a um
+	            custo d</span><span class="c5 c56">ij</span><span class="c4">. Por fim, cada pacote tem um peso
+	            w</span><span class="c5 c56">i </span><span class="c4">associado a um consumidor c</span><span
+	            class="c5 c56">i</span></p>
+	    <p class="c110"><span class="c4">O modelo tem uma vari&aacute;vel de decis&atilde;o x definida como:</span></p>
+	    <p class="c11 c110"><span class="c4"></span></p>
+	    <p class="c50"><img src="/img/vrp/image1.png"></p>
+	    <p class="c54 c11 c120"><span class="c4"></span></p>
+	    <p class="c1 c86"><span class="c4">Portanto o modelo &eacute; descrito da seguinte maneira:</span></p>
+	    <p class="c54 c11 c83"><span class="c5 c31"></span></p>
+	    <p class="c21"><span class="c2">(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image2.png"><img src="/img/vrp/image3.png"></p>
+	    <p class="c21"><span class="c2">(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image4.png"></p>
+	    <p class="c21"><span class="c2">(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image5.png"></p>
+	    <p class="c21"><span class="c2">(4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image6.png"></p>
+	    <p class="c21"><span class="c2">(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image7.png"></p>
+	    <p class="c21"><span class="c2">(6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img
+	            src="/img/vrp/image8.png"></p>
+	    <p class="c21"><span class="c2">(7)</span><span
+	            class="c119">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="/img/vrp/image9.png"></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c54 c11 c91"><span class="c4"></span></p>
+	    <p class="c54 c97"><span class="c9">A fun&ccedil;&atilde;o objetivo do problema (1) busca minimizar a soma de todas
+	            as dist&acirc;ncias percorrida por todos os ve&iacute;culos. A restri&ccedil;&atilde;o (2) diz que todo
+	            consumidor precisa ser visitado exatamente uma vez. A restri&ccedil;&atilde;o (3) &eacute; a
+	            restri&ccedil;&atilde;o de carga em que cada ve&iacute;culo n&atilde;o pode transportar pacotes cuja soma
+	            &eacute; maior que sua capacidade. A restri&ccedil;&atilde;o (4) diz que todos os ve&iacute;culos saem do
+	            deposito. A restri&ccedil;&atilde;o (5) diz que para qualquer subconjunto de v&eacute;rtices existe menos
+	            arestas do que v&eacute;rtices. Essa restri&ccedil;&atilde;o &eacute; aplicada para PRV abertos e garante
+	            que n&atilde;o ocorra ciclos. Por fim a restri&ccedil;&atilde;o (6) diz que todo ve&iacute;culo que entre no
+	            consumidor h tamb&eacute;m sai de h.</span></p>
+	    <ol class="c27 lst-kix_list_4-1" start="2">
+	        <li class="c42 c82 li-bullet-10">
+	            <h1 id="h.3znysh7" style="display:inline"><span class="c5 c7">Principais classes do problema de roteamento
+	                    de ve&iacute;culos</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c40 c11"><span class="c5 c7"></span></p>
+	    <p class="c52"><span class="c4">O PRV &eacute; um problema que estuda a log&iacute;stica de entregas veiculares
+	            proposto inicialmente por Dantzig e Ramser (1959). De forma geral, seu objetivo &eacute;
+	            otimiza&ccedil;&atilde;o de rotas para coleta e entrega de pessoas ou mercadorias. Devido &agrave;
+	            quantidade de problemas pr&aacute;ticos envolvendo o roteamento de ve&iacute;culos, sua
+	            defini&ccedil;&atilde;o vem sendo estudada e estendida ao longo das &uacute;ltimas d&eacute;cadas. A partir
+	            disso, surgiram v&aacute;rias subcategorias do PRV, mudando assim suas restri&ccedil;&otilde;es ou
+	            at&eacute; mesmo sua fun&ccedil;&atilde;o objetivo. Nessa sess&atilde;o ser&aacute; abordado as principais
+	            dessas.</span></p>
+	    <p class="c47"><span class="c4">Existem diferentes defini&ccedil;&otilde;es de PRVs na literatura, no entanto, todos
+	            os autores concordam que &eacute; poss&iacute;vel separ&aacute;-lo em tr&ecirc;s grandes classes: PRVC,
+	            PRVJT e PRVCE. A primeira &eacute; conhecida como PRV capacitado (PRVC), sua defini&ccedil;&atilde;o surge
+	            como a generaliza&ccedil;&atilde;o do</span></p>
+	    <p class="c43"><span class="c4">problema mais estudado em otimiza&ccedil;&atilde;o combinat&oacute;ria, o problema
+	            do caixeiro viajante. O PRVC foi descrito inicialmente por Dantzig e Ramser (1959) de forma que,
+	            considera-se um dep&oacute;sito central e uma frota de ve&iacute;culos id&ecirc;nticos com capacidade
+	            m&aacute;xima, a fim de atender um conjunto de consumidores que demandam o servi&ccedil;o de entrega ou
+	            coleta de mercadorias. Assim, seu objetivo &eacute; atender todos os consumidores de modo que minimize a
+	            soma total das dist&acirc;ncias de cada ve&iacute;culo. Pode-se ver uma representa&ccedil;&atilde;o na
+	            Figura 1.</span></p>
+	    <p class="c15 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 327.56px; height: 211.72px;"><img
+	                alt="#fig1" src="/img/vrp/image14.jpg" id="fig1"
+	                style="width: 327.56px; height: 211.72px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c30 c11"><span class="c4"></span></p>
+	    <p class="c90 c79"><span class="c4">Figura 1: exemplo de PRV </span></p>
+	    <p class="c79 c90"><span class="c4">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <p class="c34"><span class="c4">Neste problema todos os ve&iacute;culos iniciam sua rota no dep&oacute;sito com uma
+	            carga suficiente para atender as demandas dos consumidores presentes em sua rota. Em seguida passam por
+	            todos os consumidores na ordem prevista, e por fim voltam para o dep&oacute;sito. Em algumas
+	            inst&acirc;ncias do PRVC, dependendo do n&uacute;mero de ve&iacute;culos dispon&iacute;veis, &eacute;
+	            poss&iacute;vel n&atilde;o existir uma solu&ccedil;&atilde;o. Isso ocorre devido a restri&ccedil;&atilde;o
+	            de carga, e para evitar isso muitas das vezes usa-se um peso adicionar um novo ve&iacute;culo na
+	            fun&ccedil;&atilde;o objetivo.</span></p>
+	    <p class="c34"><span class="c4">J&aacute; o PRV com janela de tempo (PRVJT) apresenta todas as
+	            caracter&iacute;sticas do PRVC, no entanto com um fator de tempo. Essa abordagem considera que h&aacute; uma
+	            janela de tempo para o atendimento do consumidor. Sendo que permite atender a demanda antes da abertura da
+	            janela de tempo, entretanto n&atilde;o admite ap&oacute;s seu fechamento, ou seja, com atraso. Nesse
+	            problema h&aacute; mais tr&ecirc;s grandes classes que s&atilde;o caracterizadas pelo per&iacute;odo de
+	            tempo para a resolu&ccedil;&atilde;o do algoritmo encontrar uma solu&ccedil;&atilde;o, sendo eles o urgente,
+	            o repetitivo e o de projeto. O primeiro, como o nome diz, tem car&aacute;ter de urg&ecirc;ncia, ou seja,
+	            essa classe deve estar preparada para responder r&aacute;pido em mudan&ccedil;as do ambiente. A segunda
+	            normalmente utiliza uma estrat&eacute;gia de definir um subconjunto de demandas e em seguida resolve-os
+	            utilizando o algoritmo est&aacute;tico. Por exemplo, os pacotes dos consumidores que chegam de hora em hora
+	            s&atilde;o roteados separadamente. Finalmente o de projeto buscam solu&ccedil;&otilde;es com mais tempo de
+	            processamento dispon&iacute;vel, no entanto n&atilde;o pertencem a classe de VRPs</span></p>
+	    <p class="c34"><span class="c4">O VRPJT tem uma propriedade interessantes que, diferentemente dos outros VRPs, a
+	            classifica como um problema np-completo. Isso implica que, caso se prove que existe um algoritmo em tempo
+	            polinomial para o VRPJT, ent&atilde;o todos os problemas da classe np-dif&iacute;cil tamb&eacute;m
+	            poder&atilde;o ser resolvidos em tempo polinomial.</span></p>
+	    <p class="c34"><span class="c4">Por fim, o PRV de coleta e entrega (PRVCE) considera que, diferente do PRVC e o
+	            PRVJT, ocorre simultaneamente os dois tipos de servi&ccedil;os: entrega e coleta de mercadorias. Neste
+	            problema, cada cliente pode fazer, ao mesmo tempo, os dois tipos de pedidos, e cada ve&iacute;culo
+	            transporta uma mistura de pedidos de entrega e coleta.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c30 c11"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-1" start="3">
+	        <li class="c1 c42 li-bullet-11">
+	            <h1 id="h.2et92p0" style="display:inline"><span class="c5 c7">Problema de roteamento de ve&iacute;culo
+	                    din&acirc;mico e estoc&aacute;stico</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c40 c11"><span class="c5 c7"></span></p>
+	    <p class="c24"><span class="c4">O PRV din&acirc;mico (PRVD) est&aacute; dentro da categoria dos PRVJT com
+	            urg&ecirc;ncia, como dito anteriormente. Sua principal caracter&iacute;stica &eacute; que trabalha em um
+	            ambiente com constantes mudan&ccedil;as. Isso significa que, novos consumidores aparecem e s&atilde;o
+	            deletados a todo momento; alguns caminhos podem ser bloqueados; o ve&iacute;culo passa a n&atilde;o poder
+	            exercer a coleta de produtos porque quebrou; e o custo de rotas tamb&eacute;m podem variar. Portanto, o
+	            tempo de processamento para o PRVD &eacute; essencial, assim as abordagens mais comuns para resolver esse
+	            problema na literatura s&atilde;o com uso de heur&iacute;sticas ou meta-heur&iacute;sticas.</span></p>
+	    <p class="c24"><span class="c4">A grande dificuldade de trabalhar com o PRVD &eacute; que mesmo que o algoritmo
+	            encontre a melhor solu&ccedil;&atilde;o para uma determinada inst&acirc;ncia em um tempo polinomial,
+	            &eacute; poss&iacute;vel que ap&oacute;s a inser&ccedil;&atilde;o de um novo consumidor todas as rotas
+	            mudem. Por exemplo, uma solu&ccedil;&atilde;o &oacute;tima pode levar o ve&iacute;culo ao lado norte da
+	            cidade, em seguida surge um novo consumidor que faz com que a solu&ccedil;&atilde;o &oacute;tima exija que
+	            esse ve&iacute;culo seja levado para o lado sul. Visando controlar essa situa&ccedil;&atilde;o, uma boa
+	            estrat&eacute;gia seria criar uma cobertura veicular sobre o territ&oacute;rio. No entanto, tal
+	            estrat&eacute;gia pode aumentar a dist&acirc;ncia total percorrida. Para auxiliar tal cobertura seria
+	            interessante observar o hist&oacute;rico dos clientes.</span></p>
+	    <p class="c24"><span class="c9">O PRV estoc&aacute;stico (PRVE) &eacute; uma forma de trabalhar com PRVs tendo
+	            alguns tipos de dinamismo de maneira antecipada. Nesta classe de problemas, diferentemente do PRVD, existe
+	            uma probabilidade bem definida sobre os eventos futuros que s&atilde;o disponibilizados para o algoritmo de
+	            roteamento. Esta classe de problemas &eacute; inspirada no Problema do Caixeiro Viajante
+	            Probabil&iacute;stico proposto por Jaillet (1985), em que cada consumidor possui uma probabilidade de
+	            requisitar um servi&ccedil;o. O objetivo &eacute; encontrar uma rota que minimize a dist&acirc;ncia total
+	            percorrida.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c30 c11"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-0" start="3">
+	        <li class="c1 c126 li-bullet-12">
+	            <h1 id="h.tyjcwt" style="display:inline"><span class="c5 c7">O problema da Loggi</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c73 c54 c11"><span class="c5 c7"></span></p>
+	    <p class="c47"><span class="c9">No in&iacute;cio da loggi, a solu&ccedil;&atilde;o usada para entregar seus produtos
+	            foi o PRV est&aacute;tico. No entanto, devido ao seu crescimento, esse modelo se tornou
+	            insustent&aacute;vel. Assim, o artigo abordar&aacute; uma solu&ccedil;&atilde;o aplicada em big data, mas
+	            antes vamos ver os detalhes do problema</span></p>
+	    <p class="c22"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 507.87px; height: 255.60px;"><img
+	                alt="" src="/img/vrp/image13.jpg" id="fig2"
+	                style="width: 507.87px; height: 255.60px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c79 c95"><span class="c4">Figura 2: divis&atilde;o de milhas</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c45"><span class="c4">Hoje a loggi trabalha com um sistema log&iacute;stico dividido em tr&ecirc;s partes.
+	            A primeira, conhecida como a primeira milha, &eacute; a etapa em que os pacotes encomendados s&atilde;o
+	            levados para o centro de distribui&ccedil;&atilde;o. Neste lugar separa-se os pacotes por diferentes
+	            crit&eacute;rios como prioridade, sensibilidade, e a localiza&ccedil;&atilde;o. Em seguida, na milha
+	            intermedi&aacute;ria, os pacotes s&atilde;o transferidos para os centros de expedi&ccedil;&otilde;es. Nessa
+	            etapa o transporte &eacute; feito por caminh&otilde;es ou avi&otilde;es, dependendo da
+	            localiza&ccedil;&atilde;o do consumidor. Por fim, na &uacute;ltima milha, uma m&aacute;quina chamada de
+	            sorter agrupa os pacotes em sacolas de forma din&acirc;mica, de modo que quando o pacote chega a este,
+	            direciona-o a sua sacola. Ap&oacute;s carregadas, as sacolas s&atilde;o destinadas a um lugar ao qual os
+	            entregadores t&ecirc;m acesso. E finalmente os entregadores entregam os produtos seguindo as rotas feitas
+	            pela loggi. A divis&atilde;o de milhas est&aacute; exemplificada na Figura 2.</span></p>
+	    <p class="c45"><span class="c4">O desafio &eacute; dividir os pacotes em sacolas de modo que os entregadores
+	            entreguem o m&aacute;ximo de pacotes poss&iacute;veis percorrendo a menor dist&acirc;ncia, no entanto
+	            h&aacute; dois problemas. O primeiro</span></p>
+	    <p class="c45"><span class="c4">&eacute; que a solu&ccedil;&atilde;o &oacute;tima pode n&atilde;o ser a mais justa
+	            tendo em vista que alguns entregadores poder&atilde;o percorrer uma longa dist&acirc;ncia para entregar
+	            poucos pacotes e outros percorrer&atilde;o uma dist&acirc;ncia curta com muitos pacotes. O segundo problema
+	            &eacute; que, o sorter &eacute; uma esteira que divide os pacotes instantaneamente. Ou seja, os pacotes
+	            s&atilde;o direcionados para suas sacolas assim que s&atilde;o colocados no sorter. Isso faz com que
+	            n&atilde;o haja ac&uacute;mulo de informa&ccedil;&otilde;es no PRV, portanto uma abordagem que leva o
+	            passado em considera&ccedil;&atilde;o &eacute; recomendada.</span></p>
+	    <p class="c45"><span class="c4">Como explicado no modelo est&aacute;tico, pode-se resolver o PRV com um modelo de
+	            equa&ccedil;&otilde;es lineares inteiras. Com o aumento da quantidade de pacotes, esse processo se torna
+	            custoso e operacionalmente invi&aacute;vel, haja vista que se deve ter a informa&ccedil;&atilde;o de todas
+	            as entregas antes de serem computadas. Ou seja, enquanto se calcula a melhor rota para uma certa quantidade
+	            de pacotes, ocorre a chegada de novos pacotes, fazendo assim com que a loggi n&atilde;o cumpra seu objetivo
+	            de entregar seus pacotes em menos de um dia.</span></p>
+	    <p class="c45"><span class="c4">A proposta deste artigo &eacute; propor uma solu&ccedil;&atilde;o as
+	            inst&acirc;ncias da loggibud de tal modo que o algoritmo tenha alto grau de dinamicidade, podendo at&eacute;
+	            consider&aacute;-lo um problema online. Ou seja, a rota &eacute; tra&ccedil;ada enquanto o pacote
+	            chega.</span></p>
+	    <p class="c20"><span class="c4">Todavia as inst&acirc;ncias da loggibud est&atilde;o caracterizadas em diversos
+	            tipos de PRV sendo elas:</span></p>
+	    <ul class="c27 lst-kix_list_3-0 start">
+	        <li class="c143 li-bullet-13"><span class="c4">Open vehicle routing problem (OVRP) - significa que o
+	                ve&iacute;culo n&atilde;o precisam se preocupar com a voltar para o dep&oacute;sito j&aacute; que os
+	                entregadores s&atilde;o terceirizados.</span></li>
+	        <li class="c25 li-bullet-13"><span class="c4">Capacitated vehicle routing problem (CVRP) &ndash; cada
+	                ve&iacute;culo tem uma capacidade m&aacute;xima e cada pacote tem um peso.</span></li>
+	        <li class="c72 li-bullet-14"><span class="c4">Vehicle routing problem multi-depot (VRPMD) &ndash; as rotas
+	                s&atilde;o formadas no centro de distribui&ccedil;&atilde;o. E nos centros de expedi&ccedil;&otilde;es
+	                apenas segue o modelo j&aacute; feito ou este &eacute; otimizado.</span></li>
+	        <li class="c131 li-bullet-15"><span class="c4">Dynamic vehicle routing problem (DVRP) &ndash; isso implica que o
+	                problema deve ser resolvido de forma din&acirc;mica e online. Ou seja, assim que o pacote chegar no
+	                centro de expedi&ccedil;&atilde;o deve-se direcion&aacute;-lo a um ve&iacute;culo.</span></li>
+	        <li class="c131 li-bullet-16"><span class="c4">Vehicle routing problem stochastic customers &ndash; haja vista
+	                que podemos usar um modelo de agrupamento com base nos destinos dos pacotes no passado. Al&eacute;m
+	                disso, deve-se tratar esse problema como big-data devido &agrave; complexidade do territ&oacute;rio
+	                brasileiro com mais de 5700 munic&iacute;pios.</span></li>
+	    </ul>
+	    <p class="c43"><span class="c9">No caso da Loggi, &eacute; prefer&iacute;vel que o centro de expedi&ccedil;&atilde;o
+	            n&atilde;o tenha conhecimento da milha intermedi&aacute;ria. Pois o algoritmo teria que tratar imprevistos
+	            como se o caminh&atilde;o quebrasse ou atrasasse, assim gastando processamento desnecess&aacute;rio.
+	            Portanto o artigo trabalhar&aacute; apenas com o problema da &uacute;ltima milha. De forma mais
+	            espec&iacute;fica o problema considera que o ve&iacute;culo de entrega tenha uma capacidade pequena e
+	            constante (180 de volume). E Segue as seguintes etapas exemplificada na figura 3</span></p>
+	    <p class="c22"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 436.35px; height: 355.02px;"><img
+	                alt="" src="/img/vrp/image12.jpg" id="fig3"
+	                style="width: 436.35px; height: 355.02px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c54 c79 c134"><span class="c4">Figura 3: problema de &uacute;ltima milha</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_2-0 start" start="1">
+	        <li class="c54 c108"><span class="c4">Os pacotes chegam a todo momento de forma online, ou seja, s&oacute; se
+	                tem conhecimento do pacote quando ele est&aacute; no centro de expedi&ccedil;&atilde;o.</span></li>
+	        <li class="c135 c54 c142"><span class="c4">Quando os pacotes chegam em um centro de expedi&ccedil;&atilde;o,
+	                s&atilde;o separados em sacolas denominados &ldquo;bag&rdquo; por um aparelho chamado de
+	                &ldquo;sorter&rdquo;.</span></li>
+	        <li class="c12"><span class="c4">Ap&oacute;s a sacola atingir a capacidade m&aacute;xima, elas s&atilde;o
+	                dirigidas a um local onde ficar&atilde;o esperando ser entregues para o entregador.</span></li>
+	        <li class="c12"><span class="c4">O entregador pega a sacola e faz as entregas dos pacotes e volta para o centro
+	                de expedi&ccedil;&atilde;o para pegar uma nova sacola.</span></li>
+	    </ol>
+	    <p class="c54 c101"><span class="c9">Al&eacute;m da informa&ccedil;&atilde;o do sorter &eacute; sabido que &ldquo;O
+	            problema de roteamento de ve&iacute;culos denso tem propriedades territoriais fortes&rdquo; (Surita, 2019).
+	            Isso significa que &eacute; poss&iacute;vel, com base nos acontecimentos do passado, dividir o
+	            territ&oacute;rio em grupos (clusters). Ou seja, pode-se diminuir o espa&ccedil;o de busca de rotas olhando
+	            apenas para sub-regi&otilde;es do territ&oacute;rio e posteriormente tra&ccedil;ar rotas.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c30 c11"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-0" start="4">
+	        <li class="c1 c126 li-bullet-17">
+	            <h1 id="h.3dy6vkm" style="display:inline"><span class="c5 c7">Explica&ccedil;&atilde;o do algoritmo</span>
+	            </h1>
+	        </li>
+	    </ol>
+	    <p class="c36 c54 c11"><span class="c5 c7"></span></p>
+	    <ol class="c27 lst-kix_list_4-1" start="4">
+	        <li class="c84 c42 li-bullet-10">
+	            <h1 id="h.1t3h5sf" style="display:inline"><span class="c5 c7">Introdu&ccedil;&atilde;o</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c40 c11"><span class="c5 c7"></span></p>
+	    <p class="c6"><span class="c4">O algoritmo se baseia em 2 etapas: a de pr&eacute;-processamento e a de
+	            execu&ccedil;&atilde;o. A parte do pr&eacute;- processamento foi implementada pelo curso introdut&oacute;rio
+	            da loggi, para o desenvolvimento de solu&ccedil;&atilde;o de PRV em sua API. Sua implementa&ccedil;&atilde;o
+	            usa como base apenas o K-means para gera&ccedil;&atilde;o de agrupamentos, ao qual o pacote
+	            pertencer&aacute; em fun&ccedil;&atilde;o de sua localiza&ccedil;&atilde;o. J&aacute; a etapa de
+	            execu&ccedil;&atilde;o &eacute; baseada no algoritmo h&iacute;brido proposto no trabalho de doutorado do
+	            Humberto Brand&atilde;o (2011). O qual utiliza o simulated annealing para encontrar boas rotas.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c82 c54 c11"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-1" start="5">
+	        <li class="c1 c42 li-bullet-10">
+	            <h1 style="display:inline"><span class="c5 c7">Pr&eacute;-processamento</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c30 c11"><span class="c5 c7"></span></p>
+	    <p class="c52"><span class="c4">O pr&eacute;-processamento tem o objetivo de diminuir o espa&ccedil;o de busca de
+	            rotas, visto que al&eacute;m de normalmente os ve&iacute;culos serem direcionados para locais com clientes
+	            pr&oacute;ximos entre eles, &eacute; necess&aacute;rio criar uma cobertura veicular para PRVD como discutido
+	            nas sess&otilde;es anteriores. No problema em quest&atilde;o &eacute; tido mais de 1000 pacotes por
+	            inst&acirc;ncia. Por essa raz&atilde;o &eacute; importante que seja poss&iacute;vel agilizar o processo com
+	            algum m&eacute;todo de predi&ccedil;&atilde;o. No caso do artigo, foi percebido que, quando resolvidos com o
+	            modelo est&aacute;tico, havia recorr&ecirc;ncia de rotas em determinadas regi&otilde;es no per&iacute;odo de
+	            um dia. Devido a esse fato um bom fator para diminuir o espa&ccedil;o de busca seria criar grupos pelo
+	            crit&eacute;rio do territ&oacute;rio.</span></p>
+	    <p class="c45"><span class="c4">O algoritmo de agrupamento escolhido foi o &ldquo;K-means&rdquo; por tr&ecirc;s
+	            raz&otilde;es. Primeiramente, esse &eacute; um algoritmo simples baseado em centroides, ou seja, define-se
+	            alguns pontos no territ&oacute;rio que representar&atilde;o a regi&atilde;o, e para saber se tal pacote
+	            pertence &agrave;quela regi&atilde;o basta verificar a dist&acirc;ncia do pacote para todos os centroides.
+	            Isso deixa o algoritmo mais r&aacute;pido tendo em vista que existem poucos centroides que representam
+	            muitos pacotes. O segundo</span></p>
+	    <p class="c43"><span class="c4">motivo &eacute; que a loggi havia implementado apenas esse algoritmo para definir
+	            qual pacote seria colocado na sacola e obteve um bom resultado. Assim pode-se utilizar c&oacute;digo pronto
+	            e reavaliar os resultados. E a &uacute;ltima raz&atilde;o &eacute; que &eacute; poss&iacute;vel associar
+	            cada centroide com uma sacola, ou seja, todo pacote que estiver na rota de determinado centroide ser&aacute;
+	            associado a sacola que representa aquele centroide.</span></p>
+	    <p class="c47"><span class="c4">Para modelar o &ldquo;K-means&rdquo;, foi criado K pontos aleat&oacute;rios no mapa
+	            da regi&atilde;o. Onde K &eacute; uma escolha arbitr&aacute;ria que depende da regi&atilde;o. Assim, para se
+	            fazer o pr&eacute;-processamento, foi utilizado a base de dados de treinamento, e para se obter as
+	            dist&acirc;ncias foi usado o software &ldquo;openStreetMaps&rdquo;. A entrada em quest&atilde;o foi o valor
+	            de K e o nome de um arquivo que representa os pacotes entregues por um centro de expedi&ccedil;&atilde;o no
+	            passado. A sa&iacute;da s&atilde;o K pontos com longitude e latitude de modo que cada ponto &eacute; um
+	            centroide no mapa. A Figura 4 mostra tr&ecirc;s centroides, representados pela cor preta, um deposito,
+	            representado pela vermelha, e v&aacute;rios clientes, representados pela cor azul.</span></p>
+	    <p class="c1 c29"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 573.79px; height: 432.43px;"><img
+	                alt="" src="/img/vrp/image19.jpg" id="fig4"
+	                style="width: 573.79px; height: 432.43px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c53"><span class="c4">Figura 4: Exemplo de K-means</span></p>
+	    <p class="c54 c61"><span class="c4">Como a proposta deste artigo &eacute; melhorar o algoritmo da loggi, foi criado
+	            um grafo que liga os centroides mais pr&oacute;ximos. Esse grafo tem a caracter&iacute;stica de trabalhar
+	            com vizinhan&ccedil;a entre regi&otilde;es, assim, na parte da execu&ccedil;&atilde;o o espa&ccedil;o de
+	            busca ser&aacute; o centroide mais pr&oacute;ximo da</span></p>
+	    <p class="c43"><span class="c4">sacola selecionada e os centroides vizinhos. Desse modo o pacote que &eacute;
+	            representado por determinado centroide pode ir para outra sacola. Na verdade, o nome desse problema &eacute;
+	            procura por grupos naturais, que consiste em encontrar fronteiras em aglomerado de dados, no entanto,
+	            &eacute; criado regi&otilde;es de intersec&ccedil;&atilde;o entre os vizinhos. A ideia &eacute; tentar
+	            predizer qual ser&aacute; a melhor sacola para os pacotes de acordo com as rotas formadas, ao inv&eacute;s
+	            de deixar apenas a regi&atilde;o determinar seu destino.</span></p>
+	    <p class="c55 c54"><span class="c4">O algoritmo escolhido para determinar a vizinhan&ccedil;a foi o algoritmo de
+	            Prim, o qual forma a &aacute;rvore geradora m&iacute;nima. Al&eacute;m disso, como o grafo &eacute;
+	            direcionado, j&aacute; que a dist&acirc;ncia &eacute; medida em dist&acirc;ncias de ruas &eacute;
+	            necess&aacute;rio executar para todos os centroides. Ent&atilde;o basta escolher a profundidade no qual
+	            ser&aacute; feita a busca. No algoritmo em quest&atilde;o foi usado profundidade = 1, ou seja, apenas os
+	            centroides vizinhos far&atilde;o parte do espa&ccedil;o de busca na execu&ccedil;&atilde;o.</span></p>
+	    <p class="c11 c21"><span class="c5 c2"></span></p>
+	    <table class="c100" id="alg1">
+	        <tr class="c58">
+	            <td class="c99" colspan="1" rowspan="1">
+	                <p class="c1"><span class="c2 c49">Pr&eacute;-processamento</span></p>
+	            </td>
+	        </tr>
+	        <tr class="c58">
+	            <td class="c99" colspan="1" rowspan="1">
+	                <p class="c1"><span class="c10 c9">FazGrafoDeRegi&otilde;es(</span><span class="c2">&nbsp;pacotesTrain,
+	                        NumRegioes &nbsp;</span><span class="c5 c10 c9">)</span></p>
+	                <p class="c1"><span class="c60 c9">// executa o kmeans passando as instancias de treino</span></p>
+	                <p class="c1"><span class="c5 c2">CentrosMedios &lt;- Kmean(pacotesTrain, NumRegioes)</span></p>
+	                <p class="c1"><span class="c60 c9">//cria a matriz de distancia</span></p>
+	                <p class="c1"><span class="c5 c2">MDist &lt;- FazMatrizDeDistancia(CentrosMedios)</span></p>
+	                <p class="c1"><span class="c60 c9">//para cada ponto em CentroMedio</span></p>
+	                <p class="c1"><span class="c10 c9">for </span><span class="c5 c2">origem &lt;- CentroMedio</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; </span><span class="c60 c9">//executa dijkstra para fazer a
+	                        &aacute;rvore de caminho m&iacute;nimo onde origem &eacute; a raiz</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; MenorCaminho &lt;- dijkstra(origem, CentrosMedios,
+	                        MDist)</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; </span><span class="c60 c9">//guarda em vizinho os vizinhos
+	                        do ponto origem</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; vizinho[origem] &lt;- CentrosMedios(menorCaminho =
+	                        1)</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c10 c9">end for</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c10 c9">return</span><span class="c5 c2">&nbsp;vizinho</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1 c11"><span class="c5 c10 c9"></span></p>
+	            </td>
+	        </tr>
+	    </table>
+	    <p class="c21 c11"><span class="c5 c2"></span></p>
+	    <p class="c28"><span class="c4">Algoritmo 1: pr&eacute;-processamento com K-means e algoritmo de Prim</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c54 c11 c76"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-1" start="6">
+	        <li class="c1 c42 li-bullet-10">
+	            <h1 style="display:inline"><span class="c5 c7">Execu&ccedil;&atilde;o</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c30 c11"><span class="c5 c7"></span></p>
+	    <ol class="c27 lst-kix_list_4-2 start" start="1">
+	        <li class="c42 c84 li-bullet-10"><span class="c5 c7">Simulated annealing</span></li>
+	    </ol>
+	    <p class="c40 c11"><span class="c5 c7"></span></p>
+	    <p class="c54 c62"><span class="c4">A parte da execu&ccedil;&atilde;o ocorre quando j&aacute; h&aacute; os metadados
+	            do pr&eacute;-processamento. Sua fun&ccedil;&atilde;o &eacute;, efetivamente, definir a sacola para o qual o
+	            pacote, que chega de forma din&acirc;mica, ser&aacute;</span></p>
+	    <p class="c43"><span class="c4">enviado. O foco dessa parte &eacute; no algoritmo do sorter, ent&atilde;o
+	            considera-se que, ap&oacute;s a sacola encher, ser&aacute; executado um PRV est&aacute;tico com os pacotes
+	            dessa sacola. E por fim &eacute; entregue os pacotes aos entregadores.</span></p>
+	    <p class="c47"><span class="c4">Como o c&aacute;lculo do PRV est&aacute;tico ainda &eacute; muito caro
+	            computacionalmente, uma abordagem usando heur&iacute;sticas e meta-heur&iacute;sticas &eacute; recomendada
+	            para agilizar o processo. O algoritmo implementado usa como base o simulated annealing proposto
+	            primeiramente por Kirkpatrick (1983). Esse algoritmo &eacute; uma meta-heur&iacute;stica
+	            probabil&iacute;stica que faz refer&ecirc;ncia ao processo termodin&acirc;mico de resfriamento de
+	            &aacute;tomos. Foi implantado uma varia&ccedil;&atilde;o desse algoritmo chamado de simulated annealing
+	            n&atilde;o-monot&ocirc;nica (SANM) como exemplificado no pseudoc&oacute;digo abaixo.</span></p>
+	    <p class="c21 c11"><span class="c5 c2"></span></p>
+	    <table class="c32" id="alg2">
+	        <tr class="c58">
+	            <td class="c109" colspan="1" rowspan="1">
+	                <p class="c1"><span class="c49 c2">Algoritmo de execu&ccedil;&atilde;o - inserir pacotes usando
+	                        SANM</span></p>
+	            </td>
+	        </tr>
+	        <tr class="c58">
+	            <td class="c109" colspan="1" rowspan="1">
+	                <p class="c1"><span class="c10 c9">AdicionaPacotesNasSacolas(</span><span class="c2">pacotesKs,
+	                        sacolas</span><span class="c5 c10 c9">)</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">sac&rsquo; &lt;- sacolas</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c9 c10">for</span><span class="c5 c2">&nbsp;pac in pacotesKs</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c60 c9 c127">&nbsp; &nbsp; //usa as rotas previamente feitas com os pacotes
+	                        na sacola e em seguida adiciona pacotesKs usando o</span></p>
+	                <p class="c1"><span class="c60 c127 c9">&nbsp; &nbsp; //PFIH</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; s &lt;- solucaoInicialPFIH(sac&rsquo;.rotas,
+	                        pacotesKs)</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; t &lt;- 5</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; rotas &lt;- [ ]</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c10 c9">&nbsp; &nbsp; while</span><span class="c5 c2">&nbsp;tempoDeExecucao
+	                        &lt; 3 segundos</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span
+	                        class="c60 c9">//redu&ccedil;&atilde;o do percentual da temperatura</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; t &lt;- t * 0.99</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c10 c9">if </span><span
+	                        class="c5 c2">t &lt; 0.1</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span
+	                        class="c9 c60">//reaquecimento</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; t &lt;- 5</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c5 c10 c9">end if</span>
+	                </p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c60 c9">//retorna um
+	                        vizinho de forma que os pacotes dentro das sacolas n&atilde;o saia da sacola</span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; s&rsquo; &lt;- solucaoNaVizinhancaDe(s,
+	                        sac&rsquo;.pacotes, pacotesKs)</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; &Delta; = f(s&rsquo;) - f(s)</span></p>
+	                <p class="c1 c11"><span class="c2 c5"></span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c10 c9">if </span><span
+	                        class="c2">&Delta; &lt; 0 ou numAleatorio() &lt; </span><img src="/img/vrp/image10.png"></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span
+	                        class="c60 c9">//troca solu&ccedil;&atilde;o corrente pela solu&ccedil;&atilde;o vizinha</span>
+	                </p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s &lt;- s&rsquo;</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rotas &lt;- rotas +
+	                        s&rsquo;</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c10 c9">end if</span></p>
+	                <p class="c1"><span class="c2">&nbsp; &nbsp; </span><span class="c10 c9">end while</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; melhorRota &lt;- PPCSolver(rotas)</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c2">&nbsp; &nbsp; sac&rsquo; &lt;- sac&rsquo; + melhorRota.get(pac)</span>
+	                </p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c5 c10 c9">end for</span></p>
+	                <p class="c1 c11"><span class="c5 c2"></span></p>
+	                <p class="c1"><span class="c10 c9">return</span><span class="c5 c2">&nbsp;sac&rsquo;</span></p>
+	            </td>
+	        </tr>
+	    </table>
+	    <p class="c21 c11"><span class="c5 c2"></span></p>
+	    <p class="c28 c68"><span class="c4">Algoritmo 2: Algoritmo de execu&ccedil;&atilde;o &ndash; inserir pacotes usando
+	            SANM</span></p>
+	    <p class="c6"><span class="c4">A diferen&ccedil;a entre o simulated annealing padr&atilde;o e o SANM &eacute; que,
+	            para evitar os m&iacute;nimos locais, o SANM reaquece (faz t&lt;-5 quando t&lt;0.1). Assim haver&aacute; uma
+	            probabilidade maior de aceitar solu&ccedil;&otilde;es piores e ent&atilde;o buscar solu&ccedil;&otilde;es
+	            vizinhas melhores.</span></p>
+	    <ol class="c27 lst-kix_list_4-2" start="2">
+	        <li class="c42 c125 li-bullet-18">
+	            <h1 style="display:inline"><span class="c5 c7">Push-Foward insertion heuristic (PFIH)</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c30 c11"><span class="c5 c7"></span></p>
+	    <p class="c6"><span class="c4">O algoritmo Push-forward insertion heuristic &eacute; uma heur&iacute;stica muito
+	            usada em PRV, ela foi introduzida no trabalho de Solomon (1987) e possui uma estrat&eacute;gia de
+	            constru&ccedil;&atilde;o de rotas eficiente com alta dinamicidade. Para explicar essa heur&iacute;stica,
+	            observe a imagem abaixo que representa a localiza&ccedil;&atilde;o de um novo pacote (C 5) que ainda
+	            n&atilde;o foi roteado.</span></p>
+	    <p class="c54 c77"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 333.99px; height: 217.08px;"><img
+	                alt="" src="/img/vrp/image17.jpg" id="fig5"
+	                style="width: 333.99px; height: 217.08px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c79 c145"><span class="c4">Figura 5: novo consumidor chega no sorter Fonte: Humberto Brand&atilde;o
+	            (2011)</span></p>
+	    <p class="c6"><span class="c4">O que o PFIH faz &eacute; olhar todas as possibilidades de onde inserir o pacote na
+	            rota(como mostrado na imagem abaixo) verificando se n&atilde;o h&aacute; nenhuma viola&ccedil;&atilde;o de
+	            restri&ccedil;&atilde;o. No final do algoritmo, &eacute; retornada a solu&ccedil;&atilde;o que tem a menor
+	            dist&acirc;ncia.</span></p>
+	    <p class="c1 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 326.71px; height: 201.96px;"><img
+	                alt="" src="/img/vrp/image21.jpg" id="fig6"
+	                style="width: 326.71px; height: 201.96px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 115.85px; height: 104.52px;"><img
+	                alt="" src="/img/vrp/image22.jpg"
+	                style="width: 115.85px; height: 104.52px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c54 c11 c140"><span class="c5 c31"></span></p>
+	    <p class="c54 c78"><span class="c4">Figura 6: todas as possibilidades de inser&ccedil;&atilde;o com PFIH </span></p>
+	    <p class="c78 c54"><span class="c9">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <p class="c79 c11 c117"><span class="c4"></span></p>
+	    <p class="c16 c11"><span class="c4"></span></p>
+	    <p class="c54 c59"><span class="c4">O problema do PFIH &eacute; que a ordem de inser&ccedil;&atilde;o dos pacotes
+	            &eacute; importante o que a torna insuficiente para encontrar boas rotas. No entanto, essa heur&iacute;stica
+	            sempre retorna uma solu&ccedil;&atilde;o vi&aacute;vel, por essa raz&atilde;o que ela &eacute; uma
+	            &oacute;tima candidata para gerar uma solu&ccedil;&atilde;o inicial no SANM.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c11 c40"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-2" start="3">
+	        <li class="c1 c42 li-bullet-19">
+	            <h1 style="display:inline"><span class="c5 c7">Solu&ccedil;&atilde;o de vizinhan&ccedil;a</span></h1>
+	        </li>
+	    </ol>
+	    <p class="c11 c30"><span class="c5 c7"></span></p>
+	    <p class="c6"><span class="c4">Para navegar no espa&ccedil;o de busca ser&aacute; necess&aacute;rio levar em
+	            considera&ccedil;&atilde;o que quando o pacote &eacute; colocado no sorter, pode-se destin&aacute;-lo para
+	            uma das sacolas ou para ser armazenado. No primeiro caso, o pacote &eacute; vinculado com a sacola, ou seja,
+	            o pacote que entra em uma sacola n&atilde;o pode sair dela. Isso faz com que os pacotes dentro da mesma
+	            sacola perten&ccedil;am a mesma rota. No segundo caso, o pacote &eacute; guardado para ser roteado
+	            futuramente com algum crit&eacute;rio estoc&aacute;stico de armazenamento e, futuramente, de
+	            sele&ccedil;&atilde;o. No momento que o pacote &eacute; armazenado, adquire-se a informa&ccedil;&atilde;o de
+	            sua exist&ecirc;ncia, e, portanto, esse pacote poder&aacute; ser roteado em momentos oportunos.</span></p>
+	    <p class="c47"><span class="c4">No algoritmo em quest&atilde;o, o crit&eacute;rio de armazenamento depende do
+	            espa&ccedil;o no armaz&eacute;m e do n&uacute;mero de sacolas, que &eacute; definido pelo n&uacute;mero de
+	            centroides. Quando um pacote &eacute; colocado na esteira &eacute; atribu&iacute;do a ele uma sacola, em
+	            seguida o algoritmo decide se ir&aacute; armazen&aacute;-lo ou rotei&aacute;-lo. Ou seja, define-se um
+	            armaz&eacute;m da sacola que cabe P pacotes, ent&atilde;o a probabilidade dele ser armazenado ser&aacute;:
+	            (P-k)/P , onde k &eacute; o n&uacute;mero de pacotes j&aacute; armazenados. Caso contr&aacute;rio, todos os
+	            pacotes armazenados que pertencem &agrave; sacola do pacote atual e das sacolas vizinhas s&atilde;o
+	            selecionados para o roteamento.</span></p>
+	    <p class="c52"><span class="c4">O crit&eacute;rio de armazenamento e de sele&ccedil;&atilde;o &eacute; um ponto a
+	            ser melhorado, haja visto que n&atilde;o se considera a localiza&ccedil;&atilde;o do cliente. Ou seja,
+	            n&atilde;o se analisa a probabilidade de um pacote pertencer a uma determinada rota ou se poderia ir para
+	            outra eventualmente, pelo contr&aacute;rio, o crit&eacute;rio de armazenamento s&oacute; depende do
+	            espa&ccedil;o livre no armaz&eacute;m e nem considera o peso do pacote, e o de sele&ccedil;&atilde;o
+	            &eacute; completamente arbitr&aacute;rio j&aacute; que envia todos os pacotes juntos.</span></p>
+	    <p class="c6"><span class="c4">Finalmente, para encontrar a solu&ccedil;&atilde;o da vizinhan&ccedil;a, &eacute;
+	            sabido que existem dois tipos de pacotes, o pacote que ser&aacute; roteado e o pacote dentro da sacola.
+	            Este, por sua vez, n&atilde;o sai da sacola, ent&atilde;o o poss&iacute;vel vizinho pode ser gerado com um
+	            m&eacute;todo bastante usado nos algoritmos gen&eacute;ticos que se baseia em trocar a ordem que os pacotes
+	            ser&atilde;o entregues. Observe que nesse</span></p>
+	    <p class="c43"><span class="c4">caso n&atilde;o h&aacute; necessidade de verificar as restri&ccedil;&otilde;es pois
+	            a carga n&atilde;o est&aacute; sendo alterada. J&aacute; aquele, basta mudar a ordem dos pacotes em seguida
+	            usar PFIH.</span></p>
+	    <p class="c6"><span class="c4">A estrutura de dados que representa uma rota &eacute; uma lista ligada &agrave; qual
+	            o estoque se localiza na primeira posi&ccedil;&atilde;o, e em seguida a ordem que os pacotes ser&atilde;o
+	            entregues. Com isso, &eacute; poss&iacute;vel fazer 4 opera&ccedil;&otilde;es nos pacotes dentro das
+	            sacolas: a troca, a inser&ccedil;&atilde;o, o embaralhamento e a invers&atilde;o.</span></p>
+	    <p class="c11 c16"><span class="c4"></span></p>
+	    <ul class="c27 lst-kix_list_1-0 start">
+	        <li class="c46 li-bullet-15"><span class="c4">A aplica&ccedil;&atilde;o do operador de troca em uma
+	                solu&ccedil;&atilde;o s ocorre de forma a permutar dois pacotes gerando assim a solu&ccedil;&atilde;o
+	                s&rsquo;. Como &eacute; visto na Figura 7.</span></li>
+	    </ul>
+	    <p class="c1 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 433.86px; height: 78.78px;"><img
+	                alt="" src="/img/vrp/image18.png" id="fig7"
+	                style="width: 433.86px; height: 78.78px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c54 c11 c136"><span class="c4"></span></p>
+	    <p class="c94 c79"><span class="c4">Figura 7: troca</span></p>
+	    <p class="c79 c121"><span class="c4">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <ul class="c27 lst-kix_list_1-0">
+	        <li class="c88 li-bullet-20"><span class="c4">A aplica&ccedil;&atilde;o do operador de inser&ccedil;&atilde;o em
+	                uma solu&ccedil;&atilde;o S ocorre de forma a remover um pacote e em seguida adicion&aacute;-lo em outra
+	                posi&ccedil;&atilde;o gerando assim S&rsquo;. Como visto na Figura 8.</span></li>
+	    </ul>
+	    <p class="c84 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 434.32px; height: 72.96px;"><img
+	                alt="" src="/img/vrp/image20.png" id="fig8"
+	                style="width: 434.32px; height: 72.96px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c79 c104 c115"><span class="c4">Figura 8: inser&ccedil;&atilde;o</span></p>
+	    <p class="c37 c104"><span class="c4">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <ul class="c27 lst-kix_list_1-0">
+	        <li class="c128 li-bullet-15"><span class="c4">A aplica&ccedil;&atilde;o da opera&ccedil;&atilde;o de
+	                embaralhamento em uma solu&ccedil;&atilde;o S ocorre de forma em que se seleciona uma sub-rota q dentro
+	                de S, em seguida reordena q de forma aleat&oacute;ria gerando q&rsquo;. Por fim insere-se q&rsquo; onde
+	                ficava q formando a solu&ccedil;&atilde;o S&rsquo; (Figura 9).</span></li>
+	    </ul>
+	    <p class="c84 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 436.86px; height: 68.64px;"><img
+	                alt="" src="/img/vrp/image11.png" id="fig9"
+	                style="width: 436.86px; height: 68.64px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c54 c11 c93"><span class="c4"></span></p>
+	    <p class="c114 c79"><span class="c4">Figura 9: embaralhamento </span></p>
+	    <p class="c79 c114"><span class="c4">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <ul class="c27 lst-kix_list_1-0">
+	        <li class="c144 li-bullet-21"><span class="c4">A aplica&ccedil;&atilde;o da opera&ccedil;&atilde;o de
+	                invers&atilde;o em uma solu&ccedil;&atilde;o S ocorre de forma em que se seleciona uma sub-rota q dentro
+	                de S, em seguida inverta q formando q&rsquo;. Por fim insere-se q&rsquo; onde ficava q gerando a
+	                solu&ccedil;&atilde;o S&rsquo; (Figura 10).</span></li>
+	    </ul>
+	    <p class="c0"><span class="c5 c31"></span></p>
+	    <p class="c84 c54"><span
+	            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 439.39px; height: 60.59px;"><img
+	                alt="" src="/img/vrp/image15.png" id="fig10"
+	                style="width: 439.39px; height: 60.59px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+	                title=""></span></p>
+	    <p class="c54 c11 c123"><span class="c4"></span></p>
+	    <p class="c44"><span class="c4">Figura 10: invers&atilde;o</span></p>
+	    <p class="c37"><span class="c4">Fonte: Humberto Brand&atilde;o (2011)</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c82 c54 c11"><span class="c4"></span></p>
+	    <ol class="c27 lst-kix_list_4-0" start="5">
+	        <li class="c1 c126 li-bullet-22">
+	            <h1 id="h.4d34og8" style="display:inline"><span class="c5 c7">Conclus&atilde;o</span></h1>
+	        </li>
+	    </ol>
+		
+		<img src="/img/vrp/mapa.png" class="vrp">
+		
+	    <h1 class="c54 c118" id="h.2s8eyo1"><span class="c5 c7">Refer&ecirc;ncias bibliogr&aacute;ficas</span></h1>
+	    <p class="c30 c11"><span class="c5 c7"></span></p>
+	    <p class="c52"><span class="c4">Brand&atilde;o, H. algoritmo online para o problema din&acirc;mico de roteamento de
+	            ve&iacute;culos. 147(Ci&ecirc;ncia da Computa&ccedil;&atilde;o) - Instituto de Ci&ecirc;ncias Exatas da
+	            Universidade Federal, Minas Gerais, 2011</span></p>
+	    <p class="c48 c11"><span class="c4"></span></p>
+	    <p class="c6"><span class="c4">Dantzig, G. B. &amp; Ramser, J.H. The Truck Dispatching Problem. Management Science,
+	            1959, Vol. 6, pp. 80-91</span></p>
+	    <p class="c11 c48"><span class="c4"></span></p>
+	    <p class="c52"><span class="c4">Goldbarg, M. C. &amp; Luna, H. P. L. Otimiza&ccedil;&atilde;o Combinat&oacute;ria e
+	            Programa&ccedil;&atilde;o Linear -- Modelos e algoritmos. Editora Campus, 2000</span></p>
+	    <p class="c16 c11"><span class="c4"></span></p>
+	    <p class="c6"><span class="c4">Jaillet, P. Probabilistic traveling salesman problems. Massachusetts Institute of
+	            Technology (MIT), 1985</span></p>
+	    <p class="c15 c54 c11"><span class="c4"></span></p>
+	    <p class="c6"><span class="c4">Juan Camilo Fonseca-Galindo, Gabriela de Castro Surita, Jos&eacute; Maia Neto,
+	            Cristiano Leite de Castro, and Andr&eacute; Paim Lemos. 2020. A Multi-Agent System for Solving the Dynamic
+	            Capacitated Vehicle Routing Problem with Stochastic Customers using Trajectory Data Mining. arXiv:2009.12691
+	            [cs.AI]</span></p>
+	    <p class="c16 c11"><span class="c4"></span></p>
+	    <p class="c6"><span class="c4">Kirkpatrick, S., Gelatt, C. D. &amp; Vecchi, M. P. Optimization by simulated
+	            annealing. Science, 1983, Vol. 220, pp. 671-680</span></p>
+	    <p class="c15 c54 c11"><span class="c4"></span></p>
+	    <p class="c54 c55"><span class="c4">Lars M. Hvattum, Arne L&oslash;kketangen, and Gilbert Laporte. Solving a Dynamic
+	            and Stochastic Vehicle Routing Problem with a Sample Scenario Hedging Heuristic Transportation Science 2006
+	            40:4, 421-438</span></p>
+	    <p class="c48 c11"><span class="c4"></span></p>
+	    <p class="c54 c102"><span class="c4">Loggi. 2021. loggiBUD: Loggi Benchmark for Urban Deliveries. GitHub</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c54 c89"><span class="c4">Neves, Marcos Corr&ecirc;a et al. Procedimentos autom&aacute;ticos e semi
+	            autom&aacute;ticos de regionaliza&ccedil;&atilde;o por &aacute;rvore geradora m&iacute;nima. 2002.</span>
+	    </p>
+	    <p class="c125 c54 c137"><span class="c4">Psaraftis, Harilaos N. Dynamic vehicle routing problems. Vehicle routing:
+	            Methods and studies,</span></p>
+	    <p class="c38 c54"><span class="c4">v. 16, p. 223-248, 1988.</span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c0"><span class="c4"></span></p>
+	    <p class="c54 c135"><span class="c4">Solomon, M. M. Algorithms for the vehicle routing and scheduling problems with
+	            time window constraints. Operations Research, INFORMS, 1987, Vol. 35(2), pp. 254-265</span></p>
+</div>

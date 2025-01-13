@@ -1,0 +1,135 @@
+
+#tab {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    align-items: center;
+	color: #ffffff;
+	padding-top:150px;
+}
+
+/* Contêiner superior */
+#ContainerTop {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameBlack {
+    text-align: left;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameBlackClock {
+    text-align: right;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameLastMove {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Contêiner do meio */
+#ContainerMiddle {
+    display: flex;
+    gap: 10px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameBoard {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Texto preto para contraste no tabuleiro */
+}
+
+#GameText {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: black; /* Herda a cor padrão */
+}
+
+/* Contêiner inferior */
+#ContainerBottom {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    gap: 10px;
+    align-items: center;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameWhite {
+    text-align: left;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameWhiteClock {
+    text-align: right;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameSideToMove {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Botões e resultado */
+#ContainerButtons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    align-items: center;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameButtons {
+    justify-content: center;
+    gap: 10px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameResult {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Link da partida e data */
+#ContainerFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameSite {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameDate {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}

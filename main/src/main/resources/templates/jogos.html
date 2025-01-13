@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+
+    <link rel="stylesheet" href="./css/content-button.css">
+
+
+</head>
+
+<body>
+
+
+
+	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+    <div class="section">
+        <a th:href="@{/jogos/best-mate-chess}" class="card">
+            <img src="/img/home/xadrez1.png" alt="Imagem do Portfólio">
+            <div class="text">
+                <div class="title">Mate promovendo pião para cavalo</div>
+                <div class="description">minha partida com um dos mates mais dificeis de se fazer no xadrez</div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

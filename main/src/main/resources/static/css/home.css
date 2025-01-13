@@ -1,0 +1,124 @@
+
+/* Container do slider */
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Evita que o conteúdo dos slides ultrapasse */
+}
+
+/* Estilo do slider */
+.slider {
+    position: relative;
+    overflow: hidden; /* Evita que qualquer conteúdo ultrapasse a área do slider */
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Cada slide ocupa 100% da largura */
+/* Estilo do slide */
+.slide {
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+    width: 100%; /* Largura de 100% da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    align-items: center; /* Centraliza verticalmente o texto */
+    text-align: center; /* Centraliza o texto dentro do slide */
+    background-color: white;
+}
+
+/* Estilo da imagem dentro do slide */
+.slide img {
+    position: relative; /* Coloca a imagem como fundo do slide */
+    width: 100%; /* Garante que a largura da imagem ocupe 100% do slide */
+    height: 40vh; /* A imagem vai cobrir toda a altura do slide */
+    object-fit: fill; /* Faz a imagem cobrir toda a área do slide sem distorção */
+}
+
+/* Estilo do texto */
+.text {
+    position: absolute;
+    top: 50%; /* Posiciona o texto verticalmente no centro */
+    left: 50%; /* Posiciona o texto horizontalmente no centro */
+    transform: translate(-50%, -50%); /* Ajusta a posição para garantir o verdadeiro centro */
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto dentro da div */
+    padding: 20px; /* Espaçamento ao redor do texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para legibilidade */
+    border-radius: 10px; /* Bordas arredondadas no fundo do texto */
+    max-width: 80%; /* Limita a largura do texto */
+    z-index: 1;
+}
+
+
+/* Botões personalizados para navegação */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem acima dos slides */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    opacity: 1;
+}
+
+/* Botão anterior à esquerda */
+.custom-prev {
+    left: 10px; /* Ajuste a distância da borda esquerda */
+}
+
+/* Botão próximo à direita */
+.custom-next {
+    right: 10px; /* Ajuste a distância da borda direita */
+}
+
+/* Estilo dos pontos de navegação */
+.slick-dots {
+    position: absolute;
+    bottom: 10px; /* Ajusta a posição dos pontos */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza os pontos */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 5; /* Garante que os pontos fiquem abaixo dos botões */
+    color: black;
+}
+
+.slick-dots li {
+    list-style: none;
+}
+
+.slick-dots li button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilo dos pontos de navegação com especificidade aumentada */
+.slider-container .slick-dots li button:before {
+    content: '';
+    display: block;
+    width: 12px; /* Tamanho dos pontos */
+    height: 12px;
+    border-radius: 50%;
+    background-color: red !important; /* Usando !important para garantir que seja aplicado */
+    opacity: 0.8;
+}
+
+.slider-container .slick-dots li.slick-active button:before {
+    background-color: black !important; /* Cor do ponto ativo */
+    opacity: 1;
+}
+

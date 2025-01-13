@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+   
+    <link rel="stylesheet" href="./css/home.css">
+	<link rel="stylesheet" href="./css/content-button.css">
+
+    <link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick-theme.css"/>
+
+</head>
+<body>
+    
+
+	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+
+	<div class="slider-container">
+	    <button class="custom-prev">Ant</button>
+	    <div class="slider">
+	        <!-- Slide 1 -->
+	        <a th:href="@{/pesquisas/SPH}" class="slide">
+	            <img src="img/home/SPH.png" alt="SPH">
+	            <div class="text">
+	                <h2 class="title">SPH</h2>
+	                <p class="description">veja a animação do algoritmo SPH e minha segunda dissertação</p>
+	            </div>
+	        </a>
+	        <!-- Slide 2 -->
+	        <a th:href="@{/pesquisas/PRV}" class="slide">
+	            <img src="img/home/VRP.png" alt="Pesquisa">
+	            <div class="text">
+	                <h2 class="title">problema de roteamento de veículos</h2>
+	                <p class="description">Veja uma das minhas dissertações sobre o problema de roteamento de veículos</p>
+	            </div>
+	        </a>
+	        <!-- Slide 3 -->
+	        <a th:href="@{/jogos/best-mate-chess}" class="slide">
+	            <img src="img/home/xadrez1.png" alt="xadrez">
+	            <div class="text">
+	                <h2 class="title">Xadrez</h2>
+	                <p class="description">Raríssimo mate promovendo o peão para cavalo dando cheque mate</p>
+	            </div>
+	        </a>
+	    </div>
+	    <button class="custom-next">Prox</button>
+	</div>
+
+    
+
+
+
+
+
+    <div class="section">
+        <a th:href="@{/portfolio}" class="card">
+            <img src="img/home/resume.png" alt="Imagem do Portfólio">
+            <div class="text">
+                <div class="title">Portfólio</div>
+                <div class="description">Minhas competências. Meu currículo atual e os do passado.</div>
+            </div>
+        </a>
+        <a th:href="@{/jogos}" class="card">
+            <img src="img/home/jogos.png" alt="Imagem de Jogos">
+            <div class="text">
+                <div class="title">Jogos</div>
+                <div class="description">Artigos, estatísticas, preparações e anotações para os jogos que decidi me dedicar</div>
+            </div>
+        </a>
+        <a th:href="@{/pesquisas}" class="card">
+            <img src="img/home/pesquisa.png" alt="Imagem de Pesquisas">
+            <div class="text">
+                <div class="title">Pesquisas</div>
+                <div class="description">Trabalhos academicos e pessoais</div>
+            </div>
+        </a>
+        <a th:href="@{/contato}" class="card">
+            <img src="img/home/contato.png" alt="Imagem de Contato">
+            <div class="text">
+                <div class="title">Contato</div>
+                <div class="description">Saiba como entrar em contato comigo.</div>
+            </div>
+        </a>
+        <a th:href="@{/outros}" class="card">
+            <img src="img/home/fbgh54rt.png" alt="Imagem de Outros">
+            <div class="text">
+                <div class="title">Outros</div>
+                <div class="description">para projetos em desenvolvimento e curiosidades</div>
+            </div>
+        </a>
+    </div>
+    
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="./js/style/slide.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- src/main/resources/templates/fragments/canvas.html -->
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="canvasFragment(width, height)">
+	
+	<link rel="stylesheet" href="/css/opengl.css">
+    <div class="canvas-container">
+        <!--
+            Usamos th:attr para setar o width e height 
+            dinamicamente com base nos parâmetros do fragmento.
+        -->
+        <canvas id="glcanvas"
+            th:attr="width=${width}, height=${height}">
+        </canvas>
+        <div id="fps">FPS: 0</div>
+    </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+	
+	<script>
+	    // Adicionalmente, capturar diretamente no cliente
+	    const serverAddress = `${window.location.protocol}//${window.location.host}`;
+	</script>
+
+
+	  <script src="/js/openGL/SPH/mouse.js"></script>
+	  <script src="/js/openGL/SPH/shader-manager.js"></script>
+	  <script src="/js/openGL/SPH/shaderLoader.js"></script>
+	  <script src="/js/openGL/SPH/init-buffers.js"></script>
+	  <script src="/js/openGL/SPH/draw-scene.js"></script>
+	  <script src="/js/openGL/SPH/SPH.js"></script>
+</div>
+
+</html>

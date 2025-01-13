@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- src/main/resources/templates/fragments/canvas.html -->
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="pdf(pdfUrl)">
+	<link rel="stylesheet" href="/css/pdf.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+	
+	<div class="pdf-container-wrapper">
+	    <div class="pdf-container">
+	      <div id="pdf-viewer"></div>
+	    </div>
+	</div>
+	  
+	<script th:inline="javascript">
+		/* O URL do PDF é injetado dinamicamente */
+		const pdfUrl = /*[[${pdfUrl}]]*/ '/default.pdf';
+		PDFObject.embed(pdfUrl, '#pdf-viewer');
+	</script>
+</div>
+</html>

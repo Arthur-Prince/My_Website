@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+
+    <link rel="stylesheet" href="./css/portfolio.css" />
+
+
+</head>
+
+<body>
+
+
+
+	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+
+    <div class="sobre-mim">
+        <div class="sobre-mim-conteudo">
+            <div class="sobre-mim-texto">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Sou um entusiasta da tecnologia com um grande interesse em me tornar um desenvolvedor backend. 
+                    Gosto de projetar soluções eficientes, escaláveis e robustas, explorando ferramentas e tecnologias modernas 
+                    para criar sistemas de alta qualidade. Estou sempre em busca de aprender e me aprimorar para entregar o melhor 
+                    em cada projeto.
+                </p>
+            </div>
+            <div class="sobre-mim-tecnologias">
+                <h2>Tecnologias que Conheço</h2>
+                <ul>
+                    <li><strong>Linguagens:</strong> Java (Avançado), Python, C/C++, JavaScript, R</li>
+                    <li><strong>Banco de Dados:</strong> PostgreSQL, MySQL, Oracle</li>
+                    <li><strong>Testes:</strong> JaCoCo, JUnit, Postman, Insomnia</li>
+                    <li><strong>Frameworks e Bibliotecas:</strong> Spring (Boot, MVC, JPA Web), OpenGL, Vulkan</li>
+                    <li><strong>Outros:</strong> Noções básicas de Docker, desenvolvimento frontend e Google Cloud</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="projetos">
+        <section id="languages">
+            <h2>Projetos</h2>
+            <div class="language-container">
+                <div class="language" data-language="java">
+                    <img src="img/portfolio/java.png" alt="Java">
+                </div>
+                <div class="language" data-language="python">
+                    <img src="img/portfolio/python.png" alt="Python">
+                </div>
+                <div class="language" data-language="javascript">
+                    <img src="img/portfolio/js.png" alt="JavaScript">
+                </div>
+                <div class="language" data-language="cpp">
+                    <img src="img/portfolio/cpp.png" alt="C/C++">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div id="project-details" class="hidden">
+                <h3 id="language-title"></h3>
+                <p id="language-trajetoria"></p>
+                <ul id="project-list"></ul>
+                <a id="github-link" href="https://github.com/Arthur-Prince" target="_blank">Veja mais no GitHub</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="formacao-academica">
+        <h2>Formação Acadêmica</h2>
+        <div class="instituicao">
+            <h3>Universidade de São Paulo (USP)</h3>
+            <p><strong>Graduado</strong> (2018 - 2023)</p>
+            <ul>
+                <li>Curso: Bacharelado em Sistemas de Informação</li>
+                <li>Dissertação 1: <a href="#" target="_blank">Problema de Roteamento de Veículos Dinâmico Aplicado nas Instâncias da LoggiBud</a></li>
+                <li>Dissertação 2: <a href="#" target="_blank">Características de uma implementação em paralelo do método SPH com o uso da tecnologia de GLSL (OpenGL Shading Language)</a></li>
+            </ul>
+        </div>
+        <div class="instituicao">
+            <h3>Universidade de São Paulo (USP)</h3>
+            <p><strong>Mestrado em Ciências da Computação</strong> (Início em 2025)</p>
+        </div>
+    </div>
+
+    <div class="baixar-curriculo">
+        <button id="download-cv">Baixar Currículo</button>
+    </div>
+
+    <script src="./js/style/portfolio.js"></script>
+
+
+</body>
+
+</html>

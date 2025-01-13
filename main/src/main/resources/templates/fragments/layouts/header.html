@@ -1,0 +1,35 @@
+<!-- Não coloque <html>, <head> ou <body> aqui -->
+<!DOCTYPE html>
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="headerFragment">
+
+    <!-- Se quiser, pode colocar aqui um link de CSS específico só pro menu -->
+    <link rel="stylesheet" th:href="@{/css/menu.css}"/>
+
+    <!-- Aqui sim vem o <header> de verdade -->
+    <header>
+        <nav class="menu">
+			<ul>
+			    <li><a th:href="@{/home}">Home</a></li>
+			    <li><a th:href="@{/portfolio}">Portfólio</a></li>
+			    <li><a th:href="@{/jogos}">Jogos</a></li>
+			    <li><a th:href="@{/pesquisas}">Pesquisas</a></li>
+			    <li><a th:href="@{/contato}">Contato</a></li>
+			    <li><a th:href="@{/outros}">Outros</a></li>
+			</ul>
+
+            <div class="social-media">
+                <a href="https://www.youtube.com/@arthurprincedealmeida6462" target="_blank">
+                    <img src="/img/header-icon/youtube-icon.png" alt="YouTube" class="social-icon">
+                </a>
+                <a href="https://github.com/Arthur-Prince" target="_blank">
+                    <img src="/img/header-icon/github-icon.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/arthur-prince-de-almeida-50337320b/" target="_blank">
+                    <img src="/img/header-icon/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+</div>
+

@@ -1,0 +1,57 @@
+
+.section {
+    display: flex;
+    flex-direction: column; /* Empilhar os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 80px; /* Garantir que o conteúdo comece abaixo do header */
+}
+
+.section .card {
+    width: 60%; /* Tornar os cartões mais largos, mas não ocupar toda a largura */
+    height: 20vh; /* Altura fixa para cada cartão */
+    margin: 15px 0; /* Espaçamento entre os cartões */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: transform 0.3s ease-in-out;
+}
+
+.section .card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); /* Torna a imagem mais escura */
+}
+
+.card .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.card .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .description {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    opacity: 0.8; /* Diminui um pouco a opacidade quando o mouse passar */
+}

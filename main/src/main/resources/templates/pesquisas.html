@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+
+    <link rel="stylesheet" href="./css/content-button.css">
+
+
+</head>
+
+<body>
+
+
+
+    <div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+    <div class="section">
+        <a th:href="@{/pesquisas/PRV}" class="card">
+            <img src="/img/home/VRP.png" alt="Imagem do Portfólio">
+            <div class="text">
+                <div class="title">Problema de Roteamento de Veículos Dinâmico Aplicado nas Instâncias da LoggiBud</div>
+                <div class="description">dissetação sobre o problema de roteamento de veículos dinânmico aplica a uma instancia real fornecida por uma empresa de entrega</div>
+            </div>
+        </a>
+        <a th:href="@{/pesquisas/SPH}" class="card">
+            <img src="/img/home/SPH.png" alt="Imagem do Portfólio">
+            <div class="text">
+                <div class="title">Características de uma Implementação em Paralelo do Método SPH com o Uso da Tecnologia de GLSL (OpenGL Shading Language)</div>
+                <div class="description">Animação e dissetação sobre meu estudo e desenvolvimento de uma simulação de fluidos com o método SPH (Smoothed-particle hydrodynamics) aplicada a um ambiente em 2D.</div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
