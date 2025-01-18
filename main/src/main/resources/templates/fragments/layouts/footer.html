@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="footerFragment">
+
+    <link rel="stylesheet" th:href="@{/css/footer.css}" />
+
+    <!-- Wrapper que controla o layout -->
+    <div class="foot">
+        <div class="content2">
+            <!-- Adicione o conteúdo principal aqui -->
+        </div>
+
+        <!-- Footer fixado na parte inferior -->
+        <footer class="site-footer">
+            <div class="footer-left">
+                <p class="copyright">© Arthur-Prince-de-Almeida</p>
+            </div>
+            <div class="footer-center">
+                <a th:href="@{/contato}" class="contact-link">Contato</a>
+            </div>
+            <div class="footer-right">
+                <p th:text="'version '+ ${version}"></p>
+            </div>
+        </footer>
+    </div>
+
+</div>

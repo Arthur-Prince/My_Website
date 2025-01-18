@@ -1,0 +1,58 @@
+/* Garantindo que a estrutura ".foot" funcione dentro do body flexível */
+.foot {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permite que a estrutura ".foot" se expanda para ocupar espaço restante */
+    min-height: 100%; /* Garante que a altura mínima da estrutura seja igual à tela */
+}
+
+.content2 {
+    flex: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+}
+
+/* Estilo para o footer discreto */
+.site-footer {
+    background-color: #111; /* Fundo cinza escuro */
+    color: white;          /* Texto branco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    flex-shrink: 0; /* Impede que o footer seja comprimido */
+}
+.site-footer .footer-left .copyright {
+    color: white !important;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-center {
+    justify-content: center;
+}
+
+.footer-right {
+    justify-content: flex-end;
+}
+
+.contact-link {
+    color: #fff;           /* Texto branco */
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    background-color: #333; /* Fundo um pouco mais claro ao passar o mouse */
+    color: #fff;            /* Texto branco */
+}
