@@ -39,7 +39,8 @@ const projects = {
         items: [
             {
                 name: "este site",
-                resumo: "projeto com o fim de ser um site pessoal em que eu coloco tudo que eu achar interessante sobre mim. Ele foi desenvolvido usando js/html/css no frontend e java com spring para o desenvolvimento backend",
+                resumo: "projeto com o fim de ser um site pessoal em que eu coloco tudo que eu achar interessante sobre mim. Ele foi desenvolvido usando js/html/css no frontend e java com spring para o desenvolvimento backend. Nele usei diversas bibliotecas como pdfObject, pngweb e webg para o frontend. O backend foi usado o thymeleaf e o mail para enviar as páginas html e me enviar email de contato. Hoje a aplicação tem sua própria imagem docker e esta rodando em uma instância ec2 na aws",
+            	link: "https://github.com/Arthur-Prince/My_Website/tree/master",
             },
         ],
         github: "https://github.com/Arthur-Prince"
@@ -123,3 +124,30 @@ function selectLanguage(languageElement) {
     });
     languageElement.classList.add('selected');
 }
+
+document.getElementById('download-cv').addEventListener('click', async () => {
+        try {
+            const response = await fetch('/portfolio/download', {
+                method: 'GET',
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao baixar o currículo.');
+            }
+
+            // Converte a resposta em um blob
+            const blob = await response.blob();
+
+            // Cria um link temporário para download
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'arthur-curriculo.pdf'; // Nome do arquivo baixado
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url); // Libera o objeto da memória
+        } catch (error) {
+            alert('Falha ao baixar o currículo: ' + error.message);
+        }
+    });

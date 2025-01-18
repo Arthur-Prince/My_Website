@@ -2,40 +2,41 @@
 <html>
 <head>
     <title>Visualizador de PDF</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.17.359/pdf.min.js"></script>
+    <link rel="stylesheet" href="./css/pdf.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
 </head>
 <body>
 	
 	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
 	
-	
-    <canvas id="pdf-canvas"></canvas>
-    <script>
-        const url = 'arquivo.pdf'; // Substitua pelo caminho do seu arquivo PDF.
+	<div class="pdf-container-wrapper">
+    <div class="pdf-container">
+      <div id="pdf-viewer"></div>
+    </div>
+  </div>
+  <div class="content">
+    <!-- Conteúdo da página -->
+  </div>
 
-        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+  <footer class="site-footer">
+    <div class="footer-left">
+      <p class="copyright">© Arthur-Prince-de-Almeida</p>
+    </div>
+    <div class="footer-center">
+      <a href="/contact" class="contact-link">Página de Contato</a>
+    </div>
+    <div class="footer-right">
+      <!-- Conteúdo da direita -->
+    </div>
 
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.17.359/pdf.worker.min.js';
+  </footer>
 
-        const loadingTask = pdfjsLib.getDocument(url);
-
-        loadingTask.promise.then(pdf => {
-            pdf.getPage(1).then(page => {
-                const viewport = page.getViewport({ scale: 1.5 });
-                const canvas = document.getElementById('pdf-canvas');
-                const context = canvas.getContext('2d');
-
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport,
-                };
-
-                page.render(renderContext);
-            });
-        });
-    </script>
+  <script>
+    const pdfUrl = '/pdfs/PRV.pdf';
+    PDFObject.embed(pdfUrl, '#pdf-viewer');
+  </script>
 </body>
 </html>

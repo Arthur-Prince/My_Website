@@ -23,10 +23,13 @@ FROM openjdk
 WORKDIR /app
 
 # Copiar o JAR da etapa de build para a imagem final
-COPY --from=build /app/target/main-1.0.1.jar app.jar
+COPY --from=build /app/target/main-1.1.0.jar app.jar
 
 # Expor a porta que a aplicação irá usar (ajuste se necessário)
 EXPOSE 8080
+
+# Definir o perfil ativo como "prod" dentro do container
+ENV SPRING_PROFILES_ACTIVE=prod
 
 # Definir o comando para executar a aplicação
 ENTRYPOINT ["java","-jar","app.jar"]

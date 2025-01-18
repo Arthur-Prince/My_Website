@@ -1,106 +1,128 @@
 /* Configuração geral do corpo */
 body {
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+	background-color: #000; /* Fundo preto */
+	color: #fff; /* Texto branco */
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 /* Container principal */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 /* Título */
 h1 {
-    text-align: center;
-    color: #fff;
+	text-align: center;
+	color: #fff;
 }
 
 /* Lista de informações de contato */
 ul.contact-info {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 ul.contact-info li {
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    margin: 10px 0;
+	display: flex;
+	align-items: center; /* Alinha os itens verticalmente */
+	justify-content: flex-start; /* Alinha os itens à esquerda */
+	margin: 10px 0;
 }
 
 ul.contact-info li strong {
-    margin-right: 10px; /* Espaço entre o título e o conteúdo */
-    color: white;
+	margin-right: 10px; /* Espaço entre o título e o conteúdo */
+	color: white;
 }
 
 ul.contact-info a {
-    color: #fff; /* Azul claro */
-    text-decoration: none;
+	color: #fff; /* Azul claro */
+	text-decoration: none;
 }
 
 ul.contact-info a:hover {
-    text-decoration: underline; /* Sublinhado apenas nos links */
+	text-decoration: underline; /* Sublinhado apenas nos links */
 }
 
 .copy-icon {
-    width: 20px; /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    margin-left: 10px; /* Espaço entre o ícone e o conteúdo */
-    cursor: pointer; /* Mostra que é clicável */
-    transition: opacity 0.2s ease-in-out; /* Animação ao passar o mouse */
+	width: 20px; /* Largura do ícone */
+	height: 20px; /* Altura do ícone */
+	margin-left: 10px; /* Espaço entre o ícone e o conteúdo */
+	cursor: pointer; /* Mostra que é clicável */
+	transition: opacity 0.2s ease-in-out; /* Animação ao passar o mouse */
 }
 
 .copy-icon:hover {
-    opacity: 0.7; /* Reduz a opacidade ao passar o mouse */
+	opacity: 0.7; /* Reduz a opacidade ao passar o mouse */
 }
-
-
 
 /* Formulário */
 .form-container {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 
-.form-container input,
-.form-container textarea,
-.form-container button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #444; /* Bordas escuras */
-    border-radius: 5px;
-    background: #222; /* Fundo cinza escuro */
-    color: #fff; /* Texto branco */
-    font-size: 16px;
+.form-container input, .form-container textarea, .form-container button
+	{
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #444; /* Bordas escuras */
+	border-radius: 5px;
+	background: #222; /* Fundo cinza escuro */
+	color: #fff; /* Texto branco */
+	font-size: 16px;
 }
 
 .form-container button {
-    background: #1e90ff; /* Azul claro */
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+	background: #1e90ff; /* Azul claro */
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 .form-container button:hover {
-    background: #4682b4; /* Azul mais escuro ao passar o mouse */
+	background: #4682b4; /* Azul mais escuro ao passar o mouse */
+}
+
+#loadingIndicator {
+	font-size: 16px;
+	color: blue;
+}
+
+/* Exemplo de spinner */
+#loadingIndicator:after {
+	content: '';
+	width: 16px;
+	height: 16px;
+	border: 2px solid blue;
+	border-top: 2px solid transparent;
+	border-radius: 50%;
+	display: inline-block;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {from { transform:rotate(0deg);
+	
+}
+
+to {
+	transform: rotate(360deg);
+}
+
 }
 
 /* Ajustes responsivos */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1, h2 {
-        font-size: 24px;
-    }
-
-    .contact-info li {
-        font-size: 16px;
-    }
+@media ( max-width : 600px) {
+	.container {
+		padding: 10px;
+	}
+	h1, h2 {
+		font-size: 24px;
+	}
+	.contact-info li {
+		font-size: 16px;
+	}
 }

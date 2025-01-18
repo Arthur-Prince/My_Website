@@ -239,6 +239,7 @@ p, li {
 }
 
 .baixar-curriculo {
+	padding: 15px;
     display: flex;
     justify-content: center;
     margin-top: 2rem;

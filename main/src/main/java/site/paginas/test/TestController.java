@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import site.model.Shader;
+
 @Controller
 @RequestMapping("/test")
 public class TestController {

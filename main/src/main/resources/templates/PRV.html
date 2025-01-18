@@ -2,18 +2,22 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8" />
-  <title>WebGL Demo</title>
+<meta charset="utf-8" />
+<title>WebGL Demo</title>
 
-  
+
 
 </head>
 
 <body>
 	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
-	
-	
-	<div th:insert="~{fragments/content/VRP :: vrp}"></div>
+
+	<div class="content2">
+		<div th:insert="~{fragments/content/VRP :: vrp}"></div>
+
+	</div>
+
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
 </body>
 
 </html>

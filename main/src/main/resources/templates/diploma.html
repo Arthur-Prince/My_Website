@@ -2,20 +2,25 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8" />
-  <title>WebGL Demo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Blog</title>
 
-  
+<link rel="stylesheet" href="./css/contato.css" />
+
 
 </head>
 
 <body>
 	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
-	
-	<div th:insert="~{fragments/content/pdf :: pdf(pdfUrl=${pdfUrl})}"></div>
-	
-	
-	
+
+	<div class="content2">
+		<div th:insert="~{fragments/content/pdf :: pdf(pdfUrl=${pdfUrl})}"></div>
+	</div>
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
+
+
+
 </body>
 
 </html>

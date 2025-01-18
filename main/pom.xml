@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>site</groupId>
 	<artifactId>main</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<name>main</name>
 	<description>comunicação principal. onde tem os dados principais do site</description>
 	<url />
@@ -31,6 +31,11 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	
+		<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-mail</artifactId>
+    	</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -102,6 +107,8 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			
+			
 		</plugins>
 	</build>
 

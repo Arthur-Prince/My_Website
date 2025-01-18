@@ -1,9 +1,13 @@
 /* Configurações para o header */
-body {
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header {
@@ -64,4 +68,21 @@ header .menu li a:hover {
 
 .social-icon:hover {
     transform: scale(1.2); /* Aumenta o ícone quando o mouse passa por cima */
+}
+
+@media (max-width: 600px) {
+    /* Diminui fonte e espaçamentos */
+    header .menu ul {
+        gap: 3px;               /* Ajusta espaço entre eles */
+    }
+
+    header .menu li a {
+        font-size: 10px;         /* Diminui fonte */
+        padding: 8px 10px;
+    }
+
+    .social-icon {
+    	width: 15px; /* Tamanho do ícone */
+    	height: 15px;
+    }
 }

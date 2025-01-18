@@ -1,4 +1,4 @@
-package site.paginas.test;
+package site.model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
