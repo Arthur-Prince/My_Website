@@ -53,6 +53,13 @@ header .menu li a:hover {
     border-radius: 5px; /* Borda arredondada no hover */
 }
 
+/* Agrupamento do lado direito (redes + botão login) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre ícones de redes sociais e o botão */
+}
+
 /* Redes sociais */
 .social-media {
     display: flex; /* Alinha as imagens das redes sociais lado a lado */
@@ -70,19 +77,41 @@ header .menu li a:hover {
     transform: scale(1.2); /* Aumenta o ícone quando o mouse passa por cima */
 }
 
+/* Botão de Login */
+.login-button {
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #003d82;
+}
+
 @media (max-width: 600px) {
+	header {
+		padding: 5px 10px;
+	}
     /* Diminui fonte e espaçamentos */
     header .menu ul {
         gap: 3px;               /* Ajusta espaço entre eles */
     }
 
     header .menu li a {
-        font-size: 10px;         /* Diminui fonte */
-        padding: 8px 10px;
+        font-size: 12px;         /* Diminui fonte */
+        padding: 2px 7px;
     }
 
-    .social-icon {
-    	width: 15px; /* Tamanho do ícone */
-    	height: 15px;
+    .social-media {
+        display: none;
+    }
+
+    .login-button {
+        font-size: 12px;
+        padding: 5px 8px;
     }
 }

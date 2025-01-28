@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>site</groupId>
 	<artifactId>main</artifactId>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<name>main</name>
 	<description>comunicação principal. onde tem os dados principais do site</description>
 	<url />
@@ -32,6 +32,29 @@
 	</properties>
 	<dependencies>
 	
+	    
+	    
+	    <dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-api</artifactId>
+		    <version>0.11.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-impl</artifactId>
+		    <version>0.11.5</version>
+		    <scope>runtime</scope>
+		</dependency>
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-jackson</artifactId>
+		    <version>0.11.5</version>
+		    <scope>runtime</scope>
+		</dependency>
+
+
+
+
 		<dependency>
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-mail</artifactId>
@@ -69,6 +92,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+    	<dependency>
+      		<groupId>org.springframework.boot</groupId>
+      		<artifactId>spring-boot-starter-security</artifactId>
+    	</dependency>
+
 	</dependencies>
 
 	<build>

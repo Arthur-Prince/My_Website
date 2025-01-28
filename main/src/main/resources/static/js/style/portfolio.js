@@ -39,8 +39,8 @@ const projects = {
         items: [
             {
                 name: "este site",
-                resumo: "projeto com o fim de ser um site pessoal em que eu coloco tudo que eu achar interessante sobre mim. Ele foi desenvolvido usando js/html/css no frontend e java com spring para o desenvolvimento backend. Nele usei diversas bibliotecas como pdfObject, pngweb e webg para o frontend. O backend foi usado o thymeleaf e o mail para enviar as páginas html e me enviar email de contato. Hoje a aplicação tem sua própria imagem docker e esta rodando em uma instância ec2 na aws",
-            	link: "https://github.com/Arthur-Prince/My_Website/tree/master",
+                resumo: "Este projeto foi desenvolvido com o objetivo de criar um site pessoal, onde posso compartilhar tudo o que considero interessante sobre mim. No front-end, utilizei JavaScript, HTML e CSS, além de bibliotecas como PDFObject, PNGWeb e WebG. Já no back-end, empreguei Java com Spring, fazendo uso do Thymeleaf para renderização de páginas e dos recursos de envio de e-mail para gerenciar contatos. Atualmente, a aplicação está containerizada em Docker e em execução em uma instância EC2 da AWS.",
+              	link: "https://github.com/Arthur-Prince/My_Website/tree/master",
             },
         ],
         github: "https://github.com/Arthur-Prince"

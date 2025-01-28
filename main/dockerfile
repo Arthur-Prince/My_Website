@@ -16,6 +16,9 @@ COPY src ./src
 # Empacotar a aplicação (gerar o JAR)
 RUN mvn clean package -DskipTests
 
+# Renomear o JAR para um nome fixo
+RUN mv target/main-*.jar target/main.jar
+
 # Etapa 2: Executar a Aplicação com OpenJDK
 FROM openjdk
 
@@ -23,7 +26,7 @@ FROM openjdk
 WORKDIR /app
 
 # Copiar o JAR da etapa de build para a imagem final
-COPY --from=build /app/target/main-1.1.0.jar app.jar
+COPY --from=build /app/target/main.jar app.jar
 
 # Expor a porta que a aplicação irá usar (ajuste se necessário)
 EXPOSE 8080

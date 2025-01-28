@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${status} + ' - ' + ${error}"></title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .error-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        .error-container h1 {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin: 0;
+        }
+        .error-container h2 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #555;
+        }
+        .error-container p {
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+        .error-container a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .error-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 th:text="${status}"></h1>
+        <h2 th:text="${error}"></h2>
+        <p th:text="${message}"></p>
+        <a href="/" th:text="'Voltar para a página inicial'"></a>
+    </div>
+</body>
+</html>

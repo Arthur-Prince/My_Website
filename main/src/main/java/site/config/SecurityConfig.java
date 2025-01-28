@@ -1,0 +1,47 @@
+package site.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import site.filters.JwtRequestFilter;
+
+@EnableWebSecurity
+@EnableMethodSecurity 
+@Configuration
+public class SecurityConfig {
+
+    @Autowired
+    private JwtRequestFilter jwtRequestFilter;
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        http
+            .csrf().disable() // stateless => csrf normalmente desativado
+            .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // <-- sem sessão
+                .and()
+            .authorizeHttpRequests()
+                .anyRequest().permitAll(); // ou .authenticated(), conforme sua necessidade
+
+        // Desabilita formLogin() se não quiser a tela de login do Spring
+        // (você pode remover esta linha se estiver criando um login *totalmente customizado*)
+        http.formLogin().disable();
+
+        // Se quiser permitir frames no mesmo domínio
+        http.headers().frameOptions().sameOrigin();
+
+        // Adiciona o filtro JWT antes do UsernamePasswordAuthenticationFilter
+        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
+    }
+
+}

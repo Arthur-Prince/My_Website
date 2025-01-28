@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>arthur-fb arthur-fb</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+    <div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+    <div class="container">
+        <div class="login-container">
+            <div id="message"></div>
+            <!-- Contêiner para mensagens de erro -->
+            
+            <!-- 
+                 1) Definimos method="POST" e action="/login".
+                 2) Mantenha name="username" e name="password" para o Spring reconhecer
+                 3) Um listener JS desabilita o botão ao clicar em "Entrar".
+            -->
+            <form id="login-form" method="post" action="/logar">
+                <h2>Login</h2>
+                
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" id="login-button">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Ao submeter o formulário, desabilita o botão "Entrar" 
+        // para evitar múltiplos cliques até receber a resposta.
+        document.getElementById('login-form').addEventListener('submit', function() {
+            document.getElementById('login-button').disabled = true;
+        });
+    </script>
+    
+    <!-- Exibir mensagem de erro se vier ?error na URL -->
+</body>
+</html>
