@@ -1,0 +1,124 @@
+
+
+/* Header (ajuste conforme seu design) */
+header {
+	height: 15vh; /* 15% da altura da viewport */
+	background: #eee;
+}
+
+/* Container principal: editor e pré-visualização lado a lado */
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 85vh; /* 85% da altura da viewport */
+	gap: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* Área do Editor */
+.editor-container, .preview-container {
+	flex: 1;
+	border: 1px solid #ccc;
+	overflow: auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* Centraliza o título da pré-visualização */
+.preview-container h2 {
+	text-align: center;
+}
+
+/* Exemplo de ajuste do combo de fonte do CKEditor */
+.cke_combo.cke_combo__fontsize .cke_combo_button .cke_combo_text {
+	min-width: 60px !important;
+}
+
+/* Esconde a área de notificações do CKEditor */
+.cke_notifications_area {
+	display: none;
+}
+
+/* Ajusta o tamanho do container do CKEditor, se necessário (geralmente aplicado inline via JS) */
+#cke_editor1 {
+	width: 45vw !important;
+	height: 75vh !important;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+/* Exemplo: ajusta o ícone customizado, se necessário */
+.cke_button__chessiframe_icon {
+	width: 16px !important;
+	height: 16px !important;
+	background-size: 16px 16px !important;
+}
+
+.iframe-placeholder {
+	background: #f0f0f0;
+	position: relative;
+}
+
+.form-container {
+	background: #333; /* fundo escuro */
+	padding: 20px;
+	border-radius: 5px;
+	max-width: 500px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.form-container label {
+	display: block;
+	margin-top: 10px;
+}
+
+.form-container input[type="text"], .form-container textarea {
+	width: 90%;
+	padding: 8px;
+	border: none;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+
+.form-container input[type="file"] {
+	margin-top: 5px;
+}
+
+.form-container button {
+	margin-top: 15px;
+	padding: 10px 15px;
+	background: #555;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.form-container button:hover {
+	background: #777;
+}
+
+button {
+	margin-top: 15px;
+	padding: 10px 15px;
+	background: #555;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #fff;
+}
+
+button:hover {
+	background: #777;
+}
+/* Botão Commit em azul */
+.commit-button {
+	background: blue;
+	width: 100%;
+	max-width: 600px;
+	margin: 20px auto;
+	display: block;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.ehcache.org/v3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+        
+      
+        
+       <persistence directory="cachingPersistence"/>
+    
+    <!-- Define o cache "downloadFile" usando um template -->
+    <cache alias="downloadFile" uses-template="downloadFile-template"/>
+
+    <!-- Template para o cache "downloadFile" -->
+    <cache-template name="downloadFile-template">
+        <resources>
+            <!-- Até 50 entradas na memória heap -->
+            <heap unit="entries">50</heap>
+            <!-- 10 MB em offheap -->
+            <offheap unit="MB">10</offheap>
+            <!-- 50 MB em disco, persistente -->
+            <disk persistent="true" unit="MB">50</disk>
+        </resources>
+        <!-- Sem configuração de expiração (os itens permanecem até atingir a capacidade) -->
+    </cache-template>
+</config>

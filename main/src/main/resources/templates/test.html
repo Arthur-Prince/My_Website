@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-    <title>arthur-fb teste</title>
-    <link rel="stylesheet" href="./css/pdf.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+<meta charset="UTF-8">
+<title>arthur-fb</title>
+<!-- Usando a build "full-all" do CKEditor 4 (que já contém muitos plugins) -->
+<script src="/ckeditor_4.22.1_ffb4f4e2120a/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="./css/content-button.css">
+
 </head>
+
 <body>
+	<header th:insert="~{fragments/layouts/header :: headerFragment}"></header>
 	
-	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+	<!-- Campo de seleção -->
+    <div class="form-container">
+      <label for="typeSelect">Tipo:</label>
+      <select id="typeSelect">
+        <option value="post" selected>Post</option>
+        <option value="diretorio">Diretório</option>
+      </select>
+    </div>
 	
-	<div class="pdf-container-wrapper">
-    <div class="pdf-container">
-      <div id="pdf-viewer"></div>
-    </div>
+	
+	
+	
+	<div class="form-container">
+    <form id="previewForm">
+      <label for="titleInput">Título:</label>
+      <input type="text" id="titleInput" name="title" placeholder="Digite o título">
+      
+      <label for="descriptionInput">Descrição:</label>
+      <textarea id="descriptionInput" name="description" rows="4" placeholder="Digite a descrição"></textarea>
+      
+      <label for="imageInput">Imagem:</label>
+      <input type="file" id="imageInput" name="image" accept="image/*">
+      
+      <button type="button" id="previewButton">Preview</button>
+    </form>
   </div>
-  <div class="content">
-    <!-- Conteúdo da página -->
+
+  <!-- Card de Preview (o mesmo objeto, que será atualizado) -->
+  <div class="section" id="previewSection">
+    <a class="card" href="#">
+      <img id="previewImage" src="img/home/jogos.png" alt="Imagem de Jogos">
+      <div class="text">
+        <div class="title" id="previewTitle">Jogos</div>
+        <div class="description" id="previewDescription">
+          Artigos, estatísticas, preparações e anotações para os jogos que decidi me dedicar
+        </div>
+      </div>
+    </a>
   </div>
+  
+  <!-- Container com editor e pré-visualização -->
+	<div class="container" id="editorContainer">
+		<!-- Área do Editor -->
+		<div class="editor-container">
+			<textarea name="editor1" id="editor1" rows="10" cols="80">
+        <p>Digite seu conteúdo aqui...</p>
+      </textarea>
+		</div>
 
-  <footer class="site-footer">
-    <div class="footer-left">
-      <p class="copyright">© Arthur-Prince-de-Almeida</p>
-    </div>
-    <div class="footer-center">
-      <a href="/contact" class="contact-link">Página de Contato</a>
-    </div>
-    <div class="footer-right">
-      <!-- Conteúdo da direita -->
-    </div>
 
-  </footer>
+		<div class="preview-container" id="preview">
+			<h2>Pré-visualização</h2>
+			<div id="previewContent"></div>
+		</div>
+	</div>
+	
+	<!-- Botão Commit -->
+    <button type="button" class="commit-button" id="commitButton">Commit</button>
 
-  <script>
-    const pdfUrl = '/pdfs/PRV.pdf';
-    PDFObject.embed(pdfUrl, '#pdf-viewer');
-  </script>
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
+
+	<script src="/js/test.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="chess-para-post">
+
+
+	<h1 id="chess-title" th:text="${titulo}"></h1>
+	<!-- paste your PGN below and make sure you dont specify an external source with SetPgnUrl() -->
+	<form class="pgn-form">
+		<textarea class="pgn-text" id="pgnText" th:text="${pgn}">
+    </textarea>
+	</form>
+	
+
+	<!-- paste your PGN above and make sure you dont specify an external source with SetPgnUrl() -->
+	<div id=tab>
+
+		<div id="ContainerTop">
+			<div id="GameBlack"></div>
+			<div id="GameBlackClock"></div>
+			<div id="GameLastMove"></div>
+		</div>
+
+		<!-- Contêiner do meio: Tabuleiro e lista de lances -->
+		<div id="ContainerMiddle">
+			<div id="GameBoard"></div>
+			<div id="GameText"></div>
+		</div>
+
+		<!-- Contêiner inferior: Nome das brancas, tempo das brancas, quem está jogando -->
+		<div id="ContainerBottom">
+			<div id="GameWhite"></div>
+			<div id="GameWhiteClock"></div>
+			<div id="GameSideToMove"></div>
+		</div>
+
+		<!-- Botões e resultado -->
+		<div id="ContainerButtons">
+			<div id="GameButtons"></div>
+			<div id="GameResult"></div>
+		</div>
+
+		<!-- Link da partida e data -->
+		<div id="ContainerFooter">
+			<div id="GameSite"></div>
+			<div id="GameDate"></div>
+		</div>
+
+	</div>
+
+
+
+
+	<script src="/pgn4web-3.07/pgn4web.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		    "use strict";
+
+		    SetImagePath("/pgn4web-3.07/images");
+		    SetImageType("png");
+		    SetHighlightOption(true); // true or false
+		    SetGameSelectorOptions(null, false, 0, 0, 0, 15, 15, 0, 10); // (head, num, chEvent, chSite, chRound, chWhite, chBlack, chResult, chDate);
+		    SetCommentsIntoMoveText(true);
+		    SetCommentsOnSeparateLines(true);
+		    SetAutoplayDelay(1000); // milliseconds
+		    SetAutostartAutoplay(false);
+		    SetAutoplayNextGame(false); // if set, move to the next game at the end of the current game during autoplay
+		    SetInitialGame(1); // number of game to be shown at load, from 1 (default); values (keep the quotes) of "first", "last", "random" are accepted; other string values assumed as PGN search string
+		    SetInitialVariation(0); // number for the variation to be shown at load, 0 (default) for main variation
+		    SetInitialHalfmove(0, false); // halfmove number to be shown at load, 0 (default) for start position; values (keep the quotes) of "start", "end", "random", "comment" (go to first comment or variation), "variation" (go to the first variation) are also accepted. Second parameter if true applies the setting to every selected game instead of startup only (default)
+		    SetShortcutKeysEnabled(true);
+
+		    SetLiveBroadcast(1, false, false, false, false); // set live broadcast; parameters are delay (refresh delay in minutes, 0 means no broadcast, default 0) alertFlag (if true, displays debug error messages, default false) demoFlag (if true starts broadcast demo mode, default false) stepFlag (if true, autoplays updates in steps, default false) endlessFlag (if true, keeps polling for new moves even after all games are finished)
+
+		  </script>
+
+
+</div>

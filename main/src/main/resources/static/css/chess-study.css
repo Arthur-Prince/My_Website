@@ -1,0 +1,268 @@
+body{
+	color: white;
+	background-color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+#tab {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    align-items: center;
+	color: #ffffff;
+}
+
+/* Contêiner superior */
+#ContainerTop {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameBlack {
+    text-align: left;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameBlackClock {
+    text-align: right;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameLastMove {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Contêiner do meio */
+#ContainerMiddle {
+    display: flex;
+    gap: 10px;
+    color: inherit; /* Herda a cor padrão */
+    
+}
+
+.pgn-form{
+	display:none;
+}
+
+.boardTable { width:200px; height:200px; border-width:1px; } /* account for chessboard and squares border here, if any */ 
+  .whiteSquare, .blackSquare { width:25px; height:25px; }
+
+#GameBoard {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Texto preto para contraste no tabuleiro */
+}
+
+#GameText {
+	height: 300px; 
+	min-width:200px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: hidden auto;
+    font-size: 14px;
+    color: black; /* Herda a cor padrão */
+}
+
+/* Contêiner inferior */
+#ContainerBottom {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    gap: 10px;
+    align-items: center;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameWhite {
+    text-align: left;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameWhiteClock {
+    text-align: right;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameSideToMove {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Botões e resultado */
+#ContainerButtons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    align-items: center;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameButtons {
+    justify-content: center;
+    gap: 10px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameResult {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+/* Link da partida e data */
+#ContainerFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameSite {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+#GameDate {
+    text-align: center;
+    font-size: 16px;
+    color: inherit; /* Herda a cor padrão */
+}
+
+.moveOn, .variationOn {
+    background: #FFCC99;
+}
+
+a.move.notranslate {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  color: #000;  /* Cor padrão */
+  transition: color 0.3s ease;
+}
+a.move.notranslate:hover {
+  color: #666;
+}
+
+/* Estilo padrão para o link */
+a.variation.notranslate {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333; /* Cor padrão */
+  transition: color 0.3s ease;
+}
+
+/* Efeito hover padrão */
+a.variation.notranslate:hover {
+  color: #555;
+}
+
+/* Estilos específicos para links dentro das variações */
+
+/* Dentro de <div class="variation1"> */
+.variation1 a.variation.notranslate {
+  color: #e74c3c; /* Vermelho */
+}
+
+.variation1 a.variation.notranslate:hover {
+  color: #c0392b;
+}
+
+/* Dentro de <div class="variation2"> */
+.variation2 a.variation.notranslate {
+  color: #3498db; /* Azul */
+}
+
+.variation2 a.variation.notranslate:hover {
+  color: #2980b9;
+}
+
+/* Dentro de <div class="variation3"> */
+.variation3 a.variation.notranslate {
+  color: #27ae60; /* Verde */
+}
+
+.variation3 a.variation.notranslate:hover {
+  color: #229954;
+}
+
+/* Dentro de <div class="variation4"> */
+.variation4 a.variation.notranslate {
+  color: #9b59b6; /* Roxo */
+}
+
+.variation4 a.variation.notranslate:hover {
+  color: #8e44ad;
+}
+
+/* Dentro de <div class="variation5"> */
+.variation5 a.variation.notranslate {
+  color: #f39c12; /* Laranja */
+}
+
+.variation5 a.variation.notranslate:hover {
+  color: #e67e22;
+}
+
+/* Dentro de <div class="variation6"> */
+.variation6 a.variation.notranslate {
+  color: #1abc9c; /* Turquesa */
+}
+
+.variation6 a.variation.notranslate:hover {
+  color: #16a085;
+}
+
+/* Dentro de <div class="variation7"> */
+.variation7 a.variation.notranslate {
+  color: #8e44ad; /* Violeta */
+}
+
+.variation7 a.variation.notranslate:hover {
+  color: #71368a;
+}
+
+/* Dentro de <div class="variation8"> */
+.variation8 a.variation.notranslate {
+  color: #d35400; /* Laranja mais escuro */
+}
+
+.variation8 a.variation.notranslate:hover {
+  color: #ba4a00;
+}
+
+
+@media (max-width: 700px) {
+    
+
+	.boardTable { width:326px; height:326px; border-width:3px; }
+    
+
+    #GameText {
+        height: 326px;
+        width:auto;
+        font-size: 10px;
+    }
+}

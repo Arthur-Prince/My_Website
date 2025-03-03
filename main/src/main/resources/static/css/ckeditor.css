@@ -1,0 +1,13 @@
+body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+blockquote {
+  border-left: 5px solid #888;  /* Barra lateral para destaque */
+  margin: 20px 0;               /* Espaçamento vertical acima e abaixo */
+  padding: 10px 20px;           /* Espaçamento interno: 10px em cima/baixo e 20px nas laterais */
+  font-style: italic;           /* Deixa o texto em itálico */
+  color: #666;                  /* Cor do texto */
+}
+

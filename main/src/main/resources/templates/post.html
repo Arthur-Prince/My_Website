@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>arthur-fb</title>
+<!-- Usando a build "full-all" do CKEditor 4 (que já contém muitos plugins) -->
+<script src="/ckeditor_4.22.1_ffb4f4e2120a/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/content-button.css">
+
+</head>
+
+<body>
+	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+
+	<!-- Campo de seleção -->
+	<div class="form-container">
+		<label for="typeSelect">Tipo:</label> <select id="typeSelect">
+			<option value="post" selected>Post</option>
+			<option value="diretorio">Diretório</option>
+		</select>
+		<!-- Campo para digitar o nome do diretório -->
+		<label for="directoryInput">Nome do Diretório:</label> <input
+			type="text" id="directoryInput"
+			placeholder="Digite o nome do diretório">
+	</div>
+
+
+
+
+	<div class="form-container">
+		<form id="previewForm">
+			<label for="titleInput">Título:</label> <input type="text"
+				id="titleInput" name="title" placeholder="Digite o título">
+
+			<label for="descriptionInput">Descrição:</label>
+			<textarea id="descriptionInput" name="description" rows="4"
+				placeholder="Digite a descrição"></textarea>
+
+			<label for="imageInput">Imagem:</label> <input type="file"
+				id="imageInput" name="image" accept="image/*">
+
+			<button type="button" id="previewButton">Preview</button>
+		</form>
+	</div>
+
+	<!-- Card de Preview (o mesmo objeto, que será atualizado) -->
+	<div class="section" id="previewSection">
+		<a class="card" href="#"> <img id="previewImage"
+			src="/img/home/jogos.png" alt="Imagem de Jogos">
+			<div class="text">
+				<div class="title" id="previewTitle">Jogos</div>
+				<div class="description" id="previewDescription">Artigos,
+					estatísticas, preparações e anotações para os jogos que decidi me
+					dedicar</div>
+			</div>
+		</a>
+	</div>
+
+	<!-- Container com editor e pré-visualização -->
+	<div class="container" id="editorContainer">
+		<!-- Área do Editor -->
+		<div class="editor-container">
+			<textarea name="editor1" id="editor1" rows="10" cols="80">
+        <p>Digite seu conteúdo aqui...</p>
+      </textarea>
+		</div>
+
+
+		<div class="preview-container" id="preview">
+			<h2>Pré-visualização</h2>
+			<div id="previewContent"></div>
+		</div>
+	</div>
+
+	<!-- Botão Commit -->
+	<button type="button" class="commit-button" id="commitButton">Postar</button>
+
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
+
+	<script src="/js/services/post.js"></script>
+</body>
+
+</html>

@@ -36,7 +36,7 @@ let globalProgramInfo = null;
 async function loadShaders() {
     try {
         // Fazendo a requisição para obter os dados dos shaders
-        const response = await fetch(serverAddress+'/test/shaders');
+        const response = await fetch(serverAddress+'/outros/shaders');
         const shaderArray = await response.json(); // Assumindo que é um array com os shaders
 
         // Criando um mapa para associar nomes de shaders aos seus tipos

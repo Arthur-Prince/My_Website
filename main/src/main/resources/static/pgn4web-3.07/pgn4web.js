@@ -3573,7 +3573,14 @@ function variationTextFromTag(variationTag, addHtmlTags) {
   }
   var text = variationTextFromId(varId);
   if (text) {
-    if (addHtmlTags) { text = '</SPAN>' + text + '<SPAN CLASS="comment">'; }
+    if (addHtmlTags) { 
+    	//console.log(text.slice(-30));
+    	//console.log(variationTextDepth);
+    	//console.log(variationTextDepth ? ('<div CLASS="variation'+variationTextDepth+'">' + (printedVariation ? ' ' : '') + (variationTextDepth > 1 ? ' ____'.repeat(variationTextDepth) : ' ____')) : '');
+    	text+= (variationTextDepth ? ('</div><div CLASS="variation'+variationTextDepth+'">' + (printedVariation ? ' ' : '') + (variationTextDepth > 1 ? '____'.repeat(variationTextDepth) : ' ____')) : '');
+    	
+    	text = '</SPAN>' + text + '<SPAN CLASS="comment">'; 
+    }
   } else { text = ''; }
   return text;
 }
@@ -3586,7 +3593,7 @@ function variationTextFromId(varId) {
     myAlert("error: issue parsing variation id " + varId + " in game " + (currentGame+1), true);
     return "";
   }
-  var text = ++variationTextDepth ? ('<SPAN CLASS="variation">' + (printedVariation ? ' ' : '') + (variationTextDepth > 1 ? '(' : '[')) + '</SPAN>' : '';
+  var text = ++variationTextDepth ? ('<div CLASS="variation'+variationTextDepth+'">' + (printedVariation ? '' : '') + (variationTextDepth > 1 ? '____'.repeat(variationTextDepth) : '____')) : '';
   printedVariation = false;
   for (var ii = StartPlyVar[varId]; ii < StartPlyVar[varId] + PlyNumberVar[varId]; ii++) {
     printedComment = false;
@@ -3607,6 +3614,7 @@ function variationTextFromId(varId) {
 
     text += printMoveText(ii, varId, (variationTextDepth > 0), ((printedComment) || (ii == StartPlyVar[varId])), true);
   }
+  
   if (commentsIntoMoveText && (thisComment = strippedMoveComment(StartPlyVar[varId] + PlyNumberVar[varId], varId, true))) {
     if (commentsOnSeparateLines && variationTextDepth === 0) {
       text += '<DIV CLASS="comment" STYLE="line-height: 33%;">&nbsp;</DIV>';
@@ -3615,7 +3623,7 @@ function variationTextFromId(varId) {
     text += '<SPAN CLASS="comment">' + thisComment + '</SPAN>';
     printedComment = true;
   }
-  text += variationTextDepth-- ? ('<SPAN CLASS="variation">' + (variationTextDepth ? ')' : ']') + '</SPAN>') : '';
+  text += variationTextDepth-- ? ('</div>') : '';
   printedVariation = true;
   return text;
 }

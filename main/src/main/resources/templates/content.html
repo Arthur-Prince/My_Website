@@ -5,15 +5,36 @@
   <meta charset="utf-8" />
   <title>arthur-fb</title>
 
-  
+  <link rel="stylesheet" href="/css/content-button.css">  
 
 </head>
 
 <body>
 	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
 	
-	<div th:insert="~{fragments/layouts/contentBox :: contentBox}"></div>
+	<div class="content2">
+		
+		<div class="section">
+			
+			<a th:each="link : ${links}" th:href="@{${link.link}}"
+				class="card removivel"> <img th:src="${link.image}"
+				alt="Imagem do Portfólio">
+				<div class="text">
+					<div class="title" th:text="${link.title}">Título Padrão</div>
+					<div class="description" th:text="${link.description}">Descrição
+						Padrão</div>
+				</div> <!-- Botão de delete exibido somente se o usuário tiver a role USER -->
+				<button th:if="${isUser}" type="button" class="delete-btn"
+					style="position: absolute; top: 5px; right: 5px; z-index: 100;"
+					onclick="deleteItem(this.closest('a').getAttribute('data-href'))">x</button>
+			</a>
+		</div>
+		<div th:utext="${conteudo}"></div>
+		
+	</div>
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
 
+	<script src="/js/services/form/deletePage.js"></script>
 </body>
 
 </html>

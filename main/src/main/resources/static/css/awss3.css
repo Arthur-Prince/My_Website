@@ -1,0 +1,128 @@
+.content2{
+	margin-top: 50px;
+}
+
+.main {
+	border: 2px solid blue;
+	padding: 20px;
+	margin: 20px;
+	width:60%;
+	margin: 0 auto;
+}
+
+.top-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+/* Oculta os inputs de rádio */
+.directory-selector input[type="radio"] {
+  display: none;
+}
+
+/* Estiliza os labels como botões */
+.directory-selector label {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Quando o input estiver selecionado, aplica um estilo diferente */
+.directory-selector input[type="radio"]:checked + label {
+  background-color: darkblue;
+}
+
+/* Opcional: adiciona efeito hover */
+.directory-selector label:hover {
+  background-color: #0000cc;
+}
+
+
+.file-list {
+	background-color: #000;
+	border: 1px solid blue;
+	padding: 10px;
+	max-height: 500px;
+	overflow-y: auto;
+}
+
+.file-item {
+	padding: 5px;
+	border-bottom: 1px solid #777;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.file-item:last-child {
+	border-bottom: none;
+}
+.file-item button:first-of-type {
+    margin-left: auto;
+}
+
+.file-item button {
+	background-color: blue;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.bottom-bar {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.bottom-bar button {
+	background-color: blue;
+	color: #fff;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.pagination {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.pagination button {
+	background-color: blue;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	margin: 0 2px;
+	cursor: pointer;
+}
+
+/* Estilo para os botões Upload e Update */
+#uploadBtn,
+#updateBtn {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover */
+#uploadBtn:hover,
+#updateBtn:hover {
+    background-color: darkblue;
+}
+
+/* Se necessário, centraliza o conteúdo na bottom-bar */
+.bottom-bar {
+    margin-top: 15px;
+    text-align: center;
+}

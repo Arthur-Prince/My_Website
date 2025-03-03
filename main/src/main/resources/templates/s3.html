@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>arthur-fb</title>
+<link rel="stylesheet" href="/css/awss3.css">
+</head>
+<body>
+
+
+	<div th:insert="~{fragments/layouts/header :: headerFragment}"></div>
+	
+	<div class="content2">
+	<div class="main">
+		<!-- Top: seleção de diretórios e botão update -->
+		<div class="top-bar">
+			<div class="directory-selector">
+			<div th:if="${hasUserRole}" style="margin: 0; padding: 0; border: none; background: none; display: inline;">
+				<input type="radio" id="all" name="directory" value="all" checked>
+				<label for="all">All</label> 
+				<input type="radio" id="pessoal" name="directory" value="pessoal"> 
+				<label for="pessoal">Pessoal</label>
+			</div>
+					
+				<input type="radio" id="temp" name="directory" value="temp" th:attr="checked=${!hasUserRole} ? 'checked' : null" />
+				<label for="temp">Temp</label>
+				<input type="radio" id="website" name="directory" value="website">
+				<label for="website">Website</label> 
+			</div>
+			<button id="updateBtn">Update</button>
+		</div>
+
+		<!-- Lista de arquivos -->
+		<div class="file-list" id="fileList">
+			<!-- Arquivos serão carregados aqui via JavaScript -->
+		</div>
+		<!-- Paginação se houver mais de 20 arquivos -->
+		<div class="pagination" id="pagination"></div>
+
+		<!-- Bottom: upload -->
+		<div class="bottom-bar" th:if="${hasUserRole}">
+			<input type="file" id="uploadInput">
+			<button id="uploadBtn">Upload</button>
+		</div>
+	</div>
+	</div>
+
+	<div th:insert="~{fragments/layouts/footer :: footerFragment}"></div>
+
+	<script th:inline="javascript">
+  		var hasUserRole = [[${hasUserRole}]];
+	</script>
+	<script src="/js/services/form/awss3.js"></script>
+</body>
+</html>
