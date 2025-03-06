@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./main                  # Constrói a imagem a partir do Dockerfile na pasta "main"
+    container_name: app
+    restart: always
+    expose:
+      - "8080"                    # Porta interna que sua aplicação utiliza
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d   # Monta a configuração do Nginx
+      - ./certs:/etc/ssl/certs:ro            # Monta os certificados (apenas leitura)
+      - ./certs:/etc/ssl/private:ro          # Monta a chave privada (apenas leitura)
+    depends_on:
+      - app

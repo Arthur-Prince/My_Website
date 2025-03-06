@@ -1,0 +1,5 @@
+/aws-app-commands.md
+# Ignorar certificados SSL (arquivos sensíveis)
+certs/
+
+main/cachingPersistence
