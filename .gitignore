@@ -2,4 +2,4 @@
 # Ignorar certificados SSL (arquivos sensíveis)
 certs/
 
-main/cachingPersistence
+main/cachingPersistence/
